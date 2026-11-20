@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IRG Clean Build Experiment Promotion",
+  "type": "object",
+  "required": [
+    "experiment_id",
+    "hypothesis",
+    "mechanism",
+    "changed_variable",
+    "baseline",
+    "candidate",
+    "population",
+    "fresh_holdout",
+    "downstream_metrics",
+    "safety_regressions",
+    "complexity",
+    "validity",
+    "decision"
+  ],
+  "properties": {
+    "experiment_id": {
+      "type": "string"
+    },
+    "hypothesis": {
+      "type": "string"
+    },
+    "mechanism": {
+      "type": "string"
+    },
+    "changed_variable": {
+      "type": "string"
+    },
+    "baseline": {
+      "type": "object"
+    },
+    "candidate": {
+      "type": "object"
+    },
+    "population": {
+      "type": "object",
+      "required": [
+        "frozen_id",
+        "denominator"
+      ]
+    },
+    "fresh_holdout": {
+      "type": "object",
+      "required": [
+        "id",
+        "unseen",
+        "evaluation_hash"
+      ]
+    },
+    "downstream_metrics": {
+      "type": "object"
+    },
+    "safety_regressions": {
+      "type": "object"
+    },
+    "complexity": {
+      "type": "object",
+      "required": [
+        "latency_delta",
+        "storage_delta",
+        "cost_delta"
+      ]
+    },
+    "validity": {
+      "enum": [
+        "VALID",
+        "INVALID",
+        "BLOCKED"
+      ]
+    },
+    "decision": {
+      "enum": [
+        "PROPOSED",
+        "APPROVED",
+        "REJECTED",
+        "DEFERRED"
+      ]
+    },
+    "owner": {
+      "type": "string"
+    },
+    "rollback": {
+      "type": "string"
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

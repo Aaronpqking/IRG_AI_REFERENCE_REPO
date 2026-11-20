@@ -1,0 +1,2 @@
+# Lessons learned
+An exact retrieved chunk can fail to produce sufficient model-visible context. Product authority, technical evidence, context selection, answerability, realization and citation should be separately observable and evaluated. Holdouts remain unseen, post-run gold is immutable, invalid runs are invalid and failed experiments are preserved. Reranking movement is not final-user utility. Complexity must be traded against latency, storage and maintenance. The final pipeline is a proposal, not one historical production composition.
