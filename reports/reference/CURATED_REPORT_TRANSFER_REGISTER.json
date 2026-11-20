@@ -1,0 +1,70 @@
+{
+  "schema_version": "irg.reference.curated_report_registry.v1",
+  "date": "2026-11-20",
+  "classification": "LOCAL_CURATED_REPORT_SUMMARY",
+  "original_transfer_claim": false,
+  "publication_approval_status": "REVIEW_REQUIRED",
+  "external_origin_usage": "OPTIONAL_PROVENANCE_ONLY",
+  "records": [
+    {
+      "path": "reports/reference/v1/V1_CLOSEOUT_EVIDENCE_SUMMARY_20260715.md",
+      "source_name": "V1_closeout_audit_report.md",
+      "source_id": "1MaJlcfTC5TzfK2TTnqKwjESmYp0Bl-fr",
+      "source_date": "2026-07-15",
+      "scope": "historical_v1_closeout",
+      "source_review": "DIRECT_SOURCE_TEXT_READ",
+      "completeness": "SCOPED_SUMMARY_NOT_FULL_ORIGINAL",
+      "empirical_run_status": "HISTORICAL_REPORT_NOT_REEXECUTED",
+      "sha256_original": null,
+      "acceptance_status": "NONQUALIFYING_PENDING_ORIGINAL_RUN_AND_PUBLICATION_REVIEW"
+    },
+    {
+      "path": "reports/reference/v1_5/V1_5_CLOSEOUT_EVIDENCE_SUMMARY_20260731.md",
+      "source_name": "V1_5_FINAL_CLOSEOUT_20260731.md",
+      "source_id": "1uMsSqNpxsgN5MWL8KFmH49P6VT5yUvM4",
+      "source_date": "2026-07-31",
+      "scope": "historical_v1_5_closeout",
+      "source_review": "DIRECT_SOURCE_TEXT_READ",
+      "completeness": "SCOPED_SUMMARY_NOT_FULL_ORIGINAL",
+      "empirical_run_status": "HISTORICAL_REPORT_NOT_REEXECUTED",
+      "sha256_original": null,
+      "acceptance_status": "NONQUALIFYING_PENDING_ORIGINAL_RUN_AND_PUBLICATION_REVIEW"
+    },
+    {
+      "path": "reports/reference/corpus/CORPUS_AUTHORITY_RECONCILIATION_20260804.md",
+      "source_name": "V2_S2A_CORPUS_RECONCILIATION.md",
+      "source_id": "12Rtrv0EWpw0HelOdoi2EdKCobTrNBdTt",
+      "source_date": "2026-08-04",
+      "scope": "historical_corpus_authority",
+      "source_review": "DIRECT_SOURCE_TEXT_READ",
+      "completeness": "SCOPED_SUMMARY_NOT_FULL_ORIGINAL",
+      "empirical_run_status": "HISTORICAL_REPORT_NOT_REEXECUTED",
+      "sha256_original": null,
+      "acceptance_status": "NONQUALIFYING_PENDING_ORIGINAL_RUN_AND_PUBLICATION_REVIEW"
+    },
+    {
+      "path": "reports/reference/structural/STRUCTURAL_GATE3_LOSS_BOUNDARIES_20260813.md",
+      "source_name": "GATE_3_STRUCTURAL_INFORMATION_PRESERVATION_20260813T191541Z.md",
+      "source_id": "1haPwodYcGPzTYx9jC8ifPX3yS_F3F-Wm",
+      "source_date": "2026-08-13",
+      "scope": "historical_structural_loss",
+      "source_review": "DIRECT_SOURCE_TEXT_READ",
+      "completeness": "SCOPED_SUMMARY_NOT_FULL_ORIGINAL",
+      "empirical_run_status": "HISTORICAL_REPORT_NOT_REEXECUTED",
+      "sha256_original": null,
+      "acceptance_status": "NONQUALIFYING_PENDING_ORIGINAL_RUN_AND_PUBLICATION_REVIEW"
+    },
+    {
+      "path": "research/structural/SHADOW_CORPUS_PROCEDURE_HOLDOUT_20260909.md",
+      "source_name": "DOCLING_STRUCTURAL_SHADOW_CORPUS.md",
+      "source_id": "17CBrospHYTjEsL_JxbN_3P0tf9DXLr5I",
+      "source_date": "2026-09-09",
+      "scope": "historical_structural_research",
+      "source_review": "DIRECT_SOURCE_TEXT_READ",
+      "completeness": "SCOPED_SUMMARY_NOT_FULL_ORIGINAL",
+      "empirical_run_status": "HISTORICAL_REPORT_NOT_REEXECUTED",
+      "sha256_original": null,
+      "acceptance_status": "NONQUALIFYING_PENDING_ORIGINAL_RUN_AND_PUBLICATION_REVIEW"
+    }
+  ]
+}
