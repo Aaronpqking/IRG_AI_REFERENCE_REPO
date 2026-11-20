@@ -22,3 +22,6 @@ See [EVALUATOR_PROVENANCE_LEDGER.json](EVALUATOR_PROVENANCE_LEDGER.json) for all
 
 ## Design implication
 The clean-build reference may cite the historical approved evaluator **implementation and frozen contracts**, but may not infer its use in an accepted V2 release, current deployed runtime, or the final October P1/P2 research composition. Prefer a fresh, independent production-path qualification with protected holdout.
+
+## P0 portability qualifier
+The 10/10 source-hash result was directly verified against private archival bytes; it is **not locally reproducible by Codex from this repository** because source files remain withheld. The approval and contract files copied here are repository-local and independently hash-checkable. Evaluator approval is separate from public artifact publication authorization: the original approval record explicitly sets `git_publication_authorized: false` by that record. The public PR must receive independent sensitivity/publication approval before merge. See [reference portability policy](../governance/REFERENCE_PORTABILITY_POLICY.md).
