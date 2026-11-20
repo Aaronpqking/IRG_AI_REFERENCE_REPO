@@ -58,3 +58,12 @@ Eight original identity/authority source and historical test files were located 
 
 ## Exact local identity originals — approved publication (2026-11-20)
 After the user's explicit approval, five historical implementation files were transferred **unchanged** to `source_reference/identity/` and three historical tests to `tests_reference/historical/identity/`. [Original-to-local transfer ledger](governance/publication_reviews/IDENTITY_SOURCE_TRIAGE_20261120.json) contains original path, destination, **138,849 bytes**, original/local SHA-256, publication state and no-redaction status for all eight. All eight are `LOCAL_EXACT_TRANSFER_VERIFIED`; source-commit binding is still unknown and the original tests have not been run. This closes the selected *file-transfer* slice, not full identity architecture coverage or P0 strict completion.
+
+## Approved bounded report-family reconciliation (2026-11-20)
+The original conflicting multi-report draft PR #10 was closed without merge. Its five curated summaries were preserved on separate, current-main review branches and merged individually as PRs #15–#19. The local destinations and source-provenance records are:
+- [V1](reports/reference/v1/PROVENANCE.json): `reports/reference/v1/V1_CLOSEOUT_EVIDENCE_SUMMARY_20260715.md`
+- [V1.5](reports/reference/v1_5/PROVENANCE.json): `reports/reference/v1_5/V1_5_CLOSEOUT_EVIDENCE_SUMMARY_20260731.md`
+- [Corpus](reports/reference/corpus/PROVENANCE.json): `reports/reference/corpus/CORPUS_AUTHORITY_RECONCILIATION_20260804.md`
+- [Structural](reports/reference/structural/PROVENANCE.json): `reports/reference/structural/STRUCTURAL_GATE3_LOSS_BOUNDARIES_20260813.md`
+- [Structural research](research/structural/PROVENANCE.json): `research/structural/SHADOW_CORPUS_PROCEDURE_HOLDOUT_20260909.md`
+These five are **`CURATED_NOT_EXACT_TRANSFER`**; source archive SHA-256 and original run-package proof remain unavailable. Their locally synthesized contents are reference evidence but cannot substitute for full original milestone reports or empirical replay.
