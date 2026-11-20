@@ -44,3 +44,10 @@ Do not use external storage links as required evidence for current/reference doc
 **REFERENCE_SEED_IN_PROGRESS / INTEGRITY_GUARDED / NOT COMPLETE.**
 
 No production database, provider, corpus, vector index, deployment, release state, or clean-build implementation is changed by this reference audit.
+
+## Addendum — Drive source recovery and evaluator approval (2026-11-20)
+- Original `irg_ai-main` folder contains historical `src/`, `tests/`, and `src/v2_evaluator/` trees. Eleven selected serving/test files (421,897 bytes) have direct SHA-256 and AST parse evidence; Git-commit and October runtime equivalence remain unbound.
+- Ten of ten evaluator source/test hashes **exactly match** `V2_EVALUATOR_MANIFEST_v1.json`. The dependency manifest, derived population, fixture and focused test evidence also match their declared hashes.
+- Independently recovered owner approval `V2_EVALUATOR_APPROVAL_v1.json` binds the existing manifest and derived population to frozen **implementation approval**. It explicitly leaves qualification `NOT_EXECUTED` and execution unauthorized.
+- The three distinct master-manifest digests in [IRG-X001 lineage](evaluation/IRG_X001_MANIFEST_LINEAGE_20261120.md) remain unequal. Do not claim full qualification or quietly substitute revisions.
+- Public metadata is in [EVALUATOR_PROVENANCE_LEDGER](evaluation/EVALUATOR_PROVENANCE_LEDGER.json) and [SOURCE_BINDINGS](source_reference/SOURCE_BINDINGS_20261120.json). Original code, private questions, and raw derived-case data stay out of this public repository.
