@@ -12,6 +12,9 @@ class DriveSourceBindingTests(unittest.TestCase):
         payload = json.loads(path.read_text(encoding="utf-8"))
         self.assertEqual(payload["source_status"], "SELECTED_DIRECT_FILES_HASHED_UNBOUND_TO_GIT_REVISION")
         self.assertEqual(len(payload["records"]), 11)
+        self.assertEqual(payload["p0_local_evidence_status"], "EXTERNALLY_VERIFIED_NOT_LOCAL")
+        self.assertFalse(payload["local_source_completion"])
+        self.assertEqual(payload["codex_external_archive_dependency"], "PROHIBITED")
         paths, ids = set(), set()
         for record in payload["records"]:
             with self.subTest(record=record["path"]):
