@@ -26,3 +26,5 @@ Start at [CURRENT_REFERENCE_STATE.md](CURRENT_REFERENCE_STATE.md); inspect [REFE
 
 ## Updated P0 external-storage rule (2026-11-20)
 See [reference portability and Drive boundary](governance/REFERENCE_PORTABILITY_POLICY.md). External archives may be used for discovery, but current claims must be comprehensible from repository-local evidence. Historical source hashes are provenance only; they **do not populate** the required curated implementation and historical test folders. Passing non-strict CI proves integrity only. Strict P0 completion remains blocked until local evidence and the remaining authority gates are satisfied.
+
+**Identity original-source publication gate:** [Private historical identity inventory](governance/publication_reviews/IDENTITY_SOURCE_TRIAGE_20261120.json) and [review limitations](governance/publication_reviews/IDENTITY_SOURCE_REVIEW_20261120.md) authenticate selected source/test file identities without supplying implementation source or granting publication authorization. `source_reference/identity/` remains incomplete.
