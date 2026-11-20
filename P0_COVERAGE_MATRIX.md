@@ -33,17 +33,17 @@ Coverage audited against the 2026-11-20 supplied **IRG AI Reference Repository S
 | `reports/reference/scale/CORPUS_SCALE_EVOLUTION.md` | PARTIAL | Historical scale counts, original structural manifests missing |
 | `reports/reference/scale/EXPANDED_CORPUS_SCALE_TEST.md` | PARTIAL | Historical 40/10 results synthesized, late immutable ledgers missing |
 | `reports/reference/ablations/STANDARD_VS_FULL_VIEW_P2_ABLATION.md` | PARTIAL | Late paired 17-case research reported, original October run missing |
-| `reports/reference/audits/CLEAN_LAB_AUDIT_SYNTHESIS.md` | PARTIAL | Historical audit synthesis, selected detailed audits not yet transferred |
+| `reports/reference/audits/CLEAN_LAB_AUDIT_SYNTHESIS.md` | PARTIAL | Historical audit synthesis, selected detailed audits not yet transferred; directly checked source available separately |
 
 ## Summary
 - Total named P0 destinations/groups: **30**.
 - Implemented at the document/directory level: **15**.
 - Partial due to missing bound original evidence, source snapshots, run artifacts or coverage: **15**.
-- Full-P0 empirical qualification: **BLOCKED** by unresolved IRG-X001, private source availability and late experimental provenance.
+- Full-P0 empirical qualification: **BLOCKED** by unresolved IRG-X001, historical source revision binding and late experimental provenance.
 
 ## High-priority completion sequence
 1. Resolve evaluator/master manifest hash mismatch **IRG-X001** from original bound source revision; do not change the frozen manifest to force a pass.
-2. Import applicable original tests/source from authorized historical checkout as a *curated reference*, redacted for the public repository.
+2. Verify 11 discovered original Drive source/test files against the exact historical Git commit; do not publish private source bodies.
 3. Verify late October P1/P2 and scale report run IDs, frozen cases and metadata; leave current reported statistics at `HISTORY_REPORTED_UNVERIFIED` until then.
 4. Expand evaluation crosswalk to all required milestone runs; separate invalid, blocked, fresh holdout and development metrics.
 5. Audit detailed original architecture/codebase reports and update accepted/rejected mechanisms based on direct source.
