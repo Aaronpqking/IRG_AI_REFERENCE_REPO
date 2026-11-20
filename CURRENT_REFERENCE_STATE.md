@@ -49,6 +49,20 @@ This is the latest project-history state currently known and supersedes earlier 
 
 Earlier 2026-11-16 observations are retained as progression evidence but are superseded by the 2026-11-18 ledger where inconsistent: P1 accessibility 2,047/2,047 docs and 1,331 revisions; an identity-normalization defect where Bromic possessive `s` could collapse to model `S`; metadata-only Arm B substantially reduced candidate documents for several brands but still had packaging failures and one blocked manufacturer case.
 
+### November 19 historical G2/R1/R0 comparison
+
+This later read-only comparison is the newest project-history evidence currently known after the November 18 R2 ledger. It did **not** execute tests, retrieval/order experiments, provider/model calls, promotion, deployment, corpus/index mutation, or candidate modification.
+
+- Active campaign: `R2-CAMPAIGN-20261111-HANDOFF-001`.
+- Campaign state: candidate 60, `CHECKPOINTED`, no active reservations.
+- Campaign manifest SHA-256: `e1e7db9d313e854d7c14ce6c6ff61dc58583e6582af3b02245f006aec3b7c421`.
+- Frozen-G2 artifact verification: 993/993 entries matched.
+- Interpretation: retain native P2/P3 source resolution; compare a G2-FIRST ordering against a separately gated neural ordering rather than replacing upstream authority with reranking.
+- G2's 35/35 result establishes owner-conditioned occurrence retrieval on that bounded slice only. It does **not** establish complete answers, sufficient context, or current R0 end-to-end accuracy.
+- Fire Magic cases favored neural top-three evidence in the historical comparison, while Bromic and Twin Eagles exposed upstream identifier/metadata-resolution losses that reranking could not recover.
+
+These statements remain `HISTORY_REPORTED_UNVERIFIED` until the original November 19 comparison artifact and campaign manifest are transferred locally.
+
 ## Current technical interpretation
 
 1. **Identity is necessary but not sufficient.** Exact identifiers, literals, and document authority must be explicit and independently measurable.

@@ -45,7 +45,7 @@ Do not use external storage links as required evidence for current/reference doc
 
 No production database, provider, corpus, vector index, deployment, release state, or clean-build implementation is changed by this reference audit.
 
-## Addendum — Drive source recovery and evaluator approval (2026-11-20)
+## Addendum — historical archive source recovery and evaluator approval (2026-11-20)
 - Original `irg_ai-main` folder contains historical `src/`, `tests/`, and `src/v2_evaluator/` trees. Eleven selected serving/test files (421,897 bytes) have direct SHA-256 and AST parse evidence; Git-commit and October runtime equivalence remain unbound.
 - Ten of ten evaluator source/test hashes **exactly match** `V2_EVALUATOR_MANIFEST_v1.json`. The dependency manifest, derived population, fixture and focused test evidence also match their declared hashes.
 - Independently recovered owner approval `V2_EVALUATOR_APPROVAL_v1.json` binds the existing manifest and derived population to frozen **implementation approval**. It explicitly leaves qualification `NOT_EXECUTED` and execution unauthorized.
@@ -60,3 +60,8 @@ Original SHA-bound evaluator code was assembled in a private temporary workspace
 - Added the new synthesis and provenance audit documents to the validator's external-storage-URL check; no required Drive link is allowed in these current documents.
 - `V2_EVALUATOR_APPROVAL_v1.json` explicitly limits its own scope and does **not** authorize Git publication by itself. The pending public PR requires separate privacy/publication review before merge.
 - Read-only archive folder enumeration found one available `V2_MASTER_REGRESSION_MANIFEST_v1.json` and one evaluator-version artifact folder. No second original master-manifest body was found there; `IRG-X001` remains unresolved.
+
+## 11/11 source-binding rereview (2026-11-20)
+The 11 source/test records currently listed in `source_reference/SOURCE_BINDINGS_20261120.json` were independently re-fetched from the historical archive during this rereview. Their byte lengths and SHA-256 hashes matched **11/11**. This confirms that the binding ledger represents real historical files, not invented placeholders. It does **not** close local-source completion because the files are still absent from the public repository and are not bound to the exact historical Git revision.
+
+The latest project-history addition is the 2026-11-19 read-only G2/R1/R0 comparison. It is recorded as `HISTORY_REPORTED_UNVERIFIED` until its original local run/comparison package is transferred.
