@@ -31,3 +31,9 @@ GitHub Actions `Reference evidence validation` run **44689311401** passed on thi
 - 11 source/test files: source bytes read, hashes recorded and AST-parsed; 130 historical `test_*` function definitions observed but **none executed**.
 - [IRG-X001 lineage analysis](evaluation/IRG_X001_MANIFEST_LINEAGE_20261120.md) identifies three distinct master-manifest digests (pre-scorer, evaluator-bound, accessible Drive) with the evaluator-bound bytes still missing.
 - Source code remains outside the public reference repository. Source metadata alone never qualifies a release or a model response.
+
+## Evaluator implementation approval recovered
+- Original owner approval `V2_EVALUATOR_APPROVAL_v1.json` dated 2026-09-02 binds the exact existing evaluator manifest (SHA-256 `2085173f...`) and the derived-population SHA-256 `3ea5a464...`; **both matched**.
+- All **10/10** evaluator source/test files named in the manifest matched their original SHA-256 hashes directly from Drive. Four additional fixture/dependency/test-evidence/derived-population artifacts matched their bound hashes.
+- Historical evaluator status is now `AUTHORITATIVE_FROZEN` following owner approval; **qualification remains `NOT_EXECUTED`** and IRG-X001 remains open. Original historical `PENDING_OWNER_APPROVAL` snapshots are preserved unchanged.
+- [Evaluator provenance ledger](evaluation/EVALUATOR_PROVENANCE_LEDGER.json) and [approval reconciliation](evaluation/EVALUATOR_APPROVAL_RECONCILIATION_20261120.md) supersede earlier source-unavailable statements for this evaluator scope.
