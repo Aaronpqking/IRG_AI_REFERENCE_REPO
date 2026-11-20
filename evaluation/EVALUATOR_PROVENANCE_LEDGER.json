@@ -7,72 +7,62 @@
     {
       "path": "src/scripts/build_v2_evaluator_artifacts.py",
       "sha256": "99fab5b9dea238942b8fc5750cf5476abdbd374489750921b9c933784a992a45",
-      "source_id": "1WreFwk31Sn4nzEyd_BjMlnHAaq334EZZ",
-      "verification": "DIRECT_DRIVE_BYTE_HASH_MATCH",
-      "visibility": "PRIVATE_DRIVE_NOT_COPIED_TO_PUBLIC_REPO"
+      "verification": "DIRECT_ARCHIVE_BYTE_HASH_MATCH",
+      "visibility": "PRIVATE_ARCHIVE_NOT_COPIED_TO_PUBLIC_REPO"
     },
     {
       "path": "src/v2_evaluation_contract.py",
       "sha256": "99f55898bd8ba0f1f1c4e390b090aba2c8b680d39de2ac5503d1a45646920a4e",
-      "source_id": "1tyoF1wL-3jL4FImhOPyesT9PVfbEzpvC",
-      "verification": "DIRECT_DRIVE_BYTE_HASH_MATCH",
-      "visibility": "PRIVATE_DRIVE_NOT_COPIED_TO_PUBLIC_REPO"
+      "verification": "DIRECT_ARCHIVE_BYTE_HASH_MATCH",
+      "visibility": "PRIVATE_ARCHIVE_NOT_COPIED_TO_PUBLIC_REPO"
     },
     {
       "path": "src/v2_evaluator/__init__.py",
       "sha256": "89d1d3b9f2a52a3f8a63af3b118585a0c7ff78694adf09c4d83d884c1557855a",
-      "source_id": "1hbCUb4px229fxvO7BJsgGuFcx_KR5ilB",
-      "verification": "DIRECT_DRIVE_BYTE_HASH_MATCH",
-      "visibility": "PRIVATE_DRIVE_NOT_COPIED_TO_PUBLIC_REPO"
+      "verification": "DIRECT_ARCHIVE_BYTE_HASH_MATCH",
+      "visibility": "PRIVATE_ARCHIVE_NOT_COPIED_TO_PUBLIC_REPO"
     },
     {
       "path": "src/v2_evaluator/ledger.py",
       "sha256": "df30dc665265c6b7d3ec59d3803fd4be77d88c1c672e84e5032232ec85693ff1",
-      "source_id": "1iIiBv8he4T7FoKg6HA_qa5YMobR7ze9X",
-      "verification": "DIRECT_DRIVE_BYTE_HASH_MATCH",
-      "visibility": "PRIVATE_DRIVE_NOT_COPIED_TO_PUBLIC_REPO"
+      "verification": "DIRECT_ARCHIVE_BYTE_HASH_MATCH",
+      "visibility": "PRIVATE_ARCHIVE_NOT_COPIED_TO_PUBLIC_REPO"
     },
     {
       "path": "src/v2_evaluator/models.py",
       "sha256": "c176f80784a0aa749cf134b306a2efd9666d240be6ae10cc790bff2512137feb",
-      "source_id": "142YTkYY3ibaPqfVI3fHDiRiOvRa0RrcD",
-      "verification": "DIRECT_DRIVE_BYTE_HASH_MATCH",
-      "visibility": "PRIVATE_DRIVE_NOT_COPIED_TO_PUBLIC_REPO"
+      "verification": "DIRECT_ARCHIVE_BYTE_HASH_MATCH",
+      "visibility": "PRIVATE_ARCHIVE_NOT_COPIED_TO_PUBLIC_REPO"
     },
     {
       "path": "src/v2_evaluator/population.py",
       "sha256": "b394d1d677c1492e9534d1f15541c7d254530c3a5e90950642433b1b8c78c321",
-      "source_id": "1heDdItMh_86IN5bdyLXzG2U01lMVeySh",
-      "verification": "DIRECT_DRIVE_BYTE_HASH_MATCH",
-      "visibility": "PRIVATE_DRIVE_NOT_COPIED_TO_PUBLIC_REPO"
+      "verification": "DIRECT_ARCHIVE_BYTE_HASH_MATCH",
+      "visibility": "PRIVATE_ARCHIVE_NOT_COPIED_TO_PUBLIC_REPO"
     },
     {
       "path": "src/v2_evaluator/primitives.py",
       "sha256": "a4f3b067a1c8ec532c20ed39e522dde5d9a30db0016a26b6013d405391c3d353",
-      "source_id": "1SysgyHFj2FLQU8SaGpKPLf_Ca7yegD-9",
-      "verification": "DIRECT_DRIVE_BYTE_HASH_MATCH",
-      "visibility": "PRIVATE_DRIVE_NOT_COPIED_TO_PUBLIC_REPO"
+      "verification": "DIRECT_ARCHIVE_BYTE_HASH_MATCH",
+      "visibility": "PRIVATE_ARCHIVE_NOT_COPIED_TO_PUBLIC_REPO"
     },
     {
       "path": "src/v2_evaluator/scorers.py",
       "sha256": "dd9c117eba83a8843f59647a80a296e3567a3063d40d13f177524f03a8b7099e",
-      "source_id": "1HUt0oidsQOE8LMAkdSfzImgjOTadNiJ0",
-      "verification": "DIRECT_DRIVE_BYTE_HASH_MATCH",
-      "visibility": "PRIVATE_DRIVE_NOT_COPIED_TO_PUBLIC_REPO"
+      "verification": "DIRECT_ARCHIVE_BYTE_HASH_MATCH",
+      "visibility": "PRIVATE_ARCHIVE_NOT_COPIED_TO_PUBLIC_REPO"
     },
     {
       "path": "tests/test_v2_evaluator.py",
       "sha256": "de7a6ba1ea503d5d9a93e30382faf694e42e5d50135890b55bf8d16a1fb8e5a6",
-      "source_id": "1czwNfluludpZR8K_isP9UQULDuT-i4TE",
-      "verification": "DIRECT_DRIVE_BYTE_HASH_MATCH",
-      "visibility": "PRIVATE_DRIVE_NOT_COPIED_TO_PUBLIC_REPO"
+      "verification": "DIRECT_ARCHIVE_BYTE_HASH_MATCH",
+      "visibility": "PRIVATE_ARCHIVE_NOT_COPIED_TO_PUBLIC_REPO"
     },
     {
       "path": "tests/test_v2_evaluator_artifacts.py",
       "sha256": "d7efd2bae509bc5bcd67aa6adfe98168760910e203a114879877f3112a9c0243",
-      "source_id": "1Iy0o-KtUPjbixJfm-DVee-8xJt2BzKL4",
-      "verification": "DIRECT_DRIVE_BYTE_HASH_MATCH",
-      "visibility": "PRIVATE_DRIVE_NOT_COPIED_TO_PUBLIC_REPO"
+      "verification": "DIRECT_ARCHIVE_BYTE_HASH_MATCH",
+      "visibility": "PRIVATE_ARCHIVE_NOT_COPIED_TO_PUBLIC_REPO"
     }
   ],
   "frozen_metadata_files": [
