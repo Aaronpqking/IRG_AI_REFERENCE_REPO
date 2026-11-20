@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - "evaluation/**"
+      - "decisions/**"
+      - "lessons/**"
       - "scripts/**"
       - "tests_reference/**"
       - "CLAIM_REGISTER.jsonl"
@@ -12,6 +14,8 @@ on:
       - main
     paths:
       - "evaluation/**"
+      - "decisions/**"
+      - "lessons/**"
       - "scripts/**"
       - "tests_reference/**"
       - "CLAIM_REGISTER.jsonl"
