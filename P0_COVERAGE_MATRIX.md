@@ -53,3 +53,6 @@ Coverage audited against the 2026-11-20 supplied **IRG AI Reference Repository S
 A copied ADR is historical evidence, not executable proof. A transferred frozen manifest is not a completed evaluation. The 244-case population and 615-row triage are hash-verified in Drive and withheld from the public repository. Seed integrity CI is independent of strict qualification.
 
 See [P0_SEED_LEDGER.md](P0_SEED_LEDGER.md), [evaluation/FROZEN_TRANSFER_LEDGER.json](evaluation/FROZEN_TRANSFER_LEDGER.json), and [evaluation/INTEGRITY_FINDINGS_20261120.md](evaluation/INTEGRITY_FINDINGS_20261120.md).
+
+## Updated provenance vs local-implementation classification
+Historical source and evaluator bytes have been directly SHA-256 verified in private Drive, but **no historical implementation modules were deposited in the required local source subdirectories**. The source register is an evidence inventory, not substantive curated code. Required local test semantics and all strict completion gates remain incomplete. Source use in Codex must follow [REFERENCE_PORTABILITY_POLICY](governance/REFERENCE_PORTABILITY_POLICY.md). The existing 15/30 implemented/partial count is document-level inventory only; this update makes no upward completion-count claim.
