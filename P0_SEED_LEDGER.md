@@ -1,27 +1,46 @@
 # P0 reference seed verification ledger — 2026-11-20
 
-## Completed (measured)
-- Reference architecture, provenance policy, navigation and intellectual-state synthesis remain on `main` from earlier merged PRs.
-- **Eight** frozen contract/manifest source files copied unchanged from Google Drive; exact source-byte equality checked by independently matching the local Git blob SHA-1 to GitHub's blob SHA-1.
-- **Two** further evaluation historical reports transferred unchanged with the same blob comparison.
-- Master population: **244 JSONL scenarios**, original SHA-256 matched the regression manifest; historical triage: **615 JSONL decisions**, original SHA-256 matched.
-- Both raw JSONL corpora are deliberately **withheld** from the public repository because the question-level contents derive from historical live conversation material.
-- [FROZEN_TRANSFER_LEDGER](evaluation/FROZEN_TRANSFER_LEDGER.json) records sources, byte counts, original SHA-256 hashes and visibility status. [INTEGRITY_FINDINGS](evaluation/INTEGRITY_FINDINGS_20261120.md) records binding checks and exception IRG-X001.
-- Added read-only [offline validator](scripts/validate_reference_seed.py) for artifact hashes, JSON structure, population counts and cross-manifest links.
+## Completed and measured
+
+- Reference architecture, provenance policy, navigation, claim registry, and intellectual-state synthesis are present.
+- All 19 historical ADRs plus their original README are present.
+- Historical `LESSONS_LEARNED.md` and `IMPLEMENTATION_HISTORY.md` are present as substantive local files.
+- Eight frozen contract/manifest source files and two associated historical reports were transferred byte-for-byte and recorded with source SHA-256 and byte counts.
+- Master population identity: 244 JSONL scenarios, SHA-256 `4b561ffea79edc97c270cda38fbd0e5351615c0acd8d8be4eab291a3d504bd8e`.
+- Historical triage identity: 615 JSONL records, SHA-256 `8dc936cb0d7c600fdad13592f45f2b564ff8c0b41e9050294373f19432a25e2d`.
+- Those two raw populations are deliberately withheld from the public repository because they contain historical user-conversation wording.
+- [FROZEN_TRANSFER_LEDGER](evaluation/FROZEN_TRANSFER_LEDGER.json) records local paths, source artifact names, byte counts, hashes, visibility status, and IRG-X001.
+- [INTEGRITY_FINDINGS](evaluation/INTEGRITY_FINDINGS_20261120.md) records frozen binding checks.
+- [CURRENT_REFERENCE_STATE](CURRENT_REFERENCE_STATE.md) now includes the latest known October/November project-history findings, including the 2026-11-18 R2 ledger, with explicit `HISTORY_REPORTED_UNVERIFIED` status where local run packages remain absent.
+- The validator distinguishes evidence integrity from seed completion and flags external-storage dependencies, empty placeholders, and required reference areas without substantive files.
 
 ## Outstanding P0 blocks
-1. **IRG-X001:** evaluator manifest binds master regression manifest SHA-256 `9ddf9eaf...`; available original is `fa6b6291...`. Locate/verify the bound revision before evaluating or promoting.
-2. **Private frozen population reproduction:** records are hash-verified in authorized Drive but withheld from this public repository. Qualification must access them privately using hashes and permissions.
-3. **Source/test binding:** old implementation source and test snapshots are not available through the two installed GitHub repositories (reference repo and currently empty technical-data-platform repo). Obtain authorized historical source checkout or the bound tests without pushing sensitive internals into public reference.
-4. **Late P1/P2 and scale experiments:** original full run ledgers, hashes and experiment joins still absent from reference corpus; history-derived results remain provisional.
-5. **Programmatic validator execution:** script is added; independent execution of the GitHub checkout and strict-mode gate still needed. Readback and pure-data binding checks are separate from executing that Python script.
-6. **P0 source manifest completeness:** a smaller subset of priority artifact transfers is complete; the full original seed manifest requires an item-by-item reconciliation.
 
-## Guardrails
-Repository is **public**. Do not upload unredacted conversation rows, private read-model traces, credentials, or entire source trees. Original frozen evidence, historical runtime, policy-only and synthesized conclusions retain separate states. The evaluator may not claim `QUALIFICATION_PASS` from the population freeze.
+1. **IRG-X001:** evaluator manifest binds master-regression manifest SHA-256 `9ddf9eaf...`; repository-local manifest hashes to `fa6b6291...`. Recover the evaluator-bound revision from directly bound historical evidence. Do not rewrite either frozen artifact to force a pass.
+2. **Private frozen population reproduction:** two historical populations are hash-verified but intentionally not public. Qualification requiring them must use separately authorized copies that match the recorded hashes.
+3. **Curated source/test seeding:** legacy implementation source and behavior-defining tests are being seeded. Until `source_reference/*`, `source_snapshot/`, and the curated behavior-test set contain substantive local files, code-level reference coverage is incomplete.
+4. **Milestone report seeding:** `reports/reference/v1`, `v1_5`, `corpus`, and `structural` remain incomplete until their selected direct historical reports are local.
+5. **Structural research seeding:** `research/structural/` is not complete until the selected structural mechanisms/reports are present.
+6. **Late October/November provenance:** the P1/P2 reconstruction, 40-case scale comparison, 17-case full-view ablation, November alias audit, and R2 P0–P7 ledger require their original bound run artifacts before their status can move beyond history-reported evidence.
+7. **R2 evaluation:** latest authoritative project-history state reports P1 only 6/150 with 0 accepted gates; P5/P6 0/5 sufficiency; SLO/p95 not established.
+8. **Completion-mode CI:** `python scripts/validate_reference_seed.py --strict` must pass before the reference seed is declared complete.
+
+## Public-repository guardrails
+
+Do not upload:
+- credentials or secrets;
+- customer/employee records;
+- private conversations;
+- operational databases;
+- unsanitized traces;
+- private frozen question populations;
+- generated vector stores;
+- raw corpus material unless separately approved.
+
+Do not use external storage links as required evidence for current/reference documents. A current claim must be understandable from repository-local evidence plus explicit claim status.
 
 ## Status
-**P0_REFERENCE_SEED_EXPANDED / NOT FULLY QUALIFIED.** No production/runtime database, model, corpus, Qdrant, deployment or release state changed.
 
-## Verified CI execution
-GitHub Actions `Reference evidence validation` run **44689311401** passed on this review branch. It executed the offline validator, unit-test discovery, and a check that P0 retains explicit blockers. This is a passing *seed integrity* check, not a passing qualification gate. Drive revision history was also checked for IRG-X001; only the present revision is exposed for each manifest, so the discrepancy remains open.
+**REFERENCE_SEED_IN_PROGRESS / INTEGRITY_GUARDED / NOT COMPLETE.**
+
+No production database, provider, corpus, vector index, deployment, release state, or clean-build implementation is changed by this reference audit.
