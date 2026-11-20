@@ -18,9 +18,16 @@ class EvaluatorApprovalBindingTests(unittest.TestCase):
         approval = read_json("evaluation/frozen/V2_EVALUATOR_APPROVAL_v1.json")
         manifest = read_json("evaluation/frozen/V2_EVALUATOR_MANIFEST_v1.json")
         self.assertEqual(approval["approval"]["approval_status"], "AUTHORITATIVE_FROZEN")
-        self.assertEqual(approval["approved_artifact"]["manifest_sha256"],
-                         sha256_file("evaluation/frozen/V2_EVALUATOR_MANIFEST_v1.json"))
-        self.assertEqual(approval["approved_artifact"]["manifest_sha256"], manifest["file_sha256"] if "file_sha256" in manifest else sha256_file("evaluation/frozen/V2_EVALUATOR_MANIFEST_v1.json"))
+        self.assertEqual(
+            approval["approved_artifact"]["manifest_sha256"],
+            sha256_file("evaluation/frozen/V2_EVALUATOR_MANIFEST_v1.json"),
+        )
+        self.assertEqual(
+            approval["approved_artifact"]["manifest_sha256"],
+            manifest["file_sha256"]
+            if "file_sha256" in manifest
+            else sha256_file("evaluation/frozen/V2_EVALUATOR_MANIFEST_v1.json"),
+        )
         self.assertFalse(approval["authorization_limits"]["qualification_execution_authorized"])
         self.assertEqual(approval["post_approval_state"]["qualification"], "NOT_EXECUTED")
 
@@ -34,17 +41,30 @@ class EvaluatorApprovalBindingTests(unittest.TestCase):
         expected_sources = dict(manifest["source_hashes"])
         expected_sources.update(manifest["test_source_hashes"])
         self.assertEqual(len(expected_sources), 10)
-        self.assertEqual({r["path"]: r["sha256"] for r in ledger["source_and_test_files"]}, expected_sources)
-        self.assertTrue(all(r["visibility"] == "PRIVATE_DRIVE_NOT_COPIED_TO_PUBLIC_REPO"
-                            for r in ledger["source_and_test_files"]))
+        self.assertEqual(
+            {r["path"]: r["sha256"] for r in ledger["source_and_test_files"]},
+            expected_sources,
+        )
+        self.assertTrue(
+            all(
+                r["visibility"] == "PRIVATE_ARCHIVE_NOT_COPIED_TO_PUBLIC_REPO"
+                for r in ledger["source_and_test_files"]
+            )
+        )
+        self.assertTrue(all("source_id" not in r for r in ledger["source_and_test_files"]))
         for artifact in ledger["frozen_metadata_files"]:
             with self.subTest(path=artifact["path"]):
                 self.assertEqual(sha256_file(artifact["path"]), artifact["sha256"])
-        self.assertEqual(ledger["withheld_artifact"]["sha256"],
-                         manifest["derived_population_manifest"]["file_sha256"])
+        self.assertEqual(
+            ledger["withheld_artifact"]["sha256"],
+            manifest["derived_population_manifest"]["file_sha256"],
+        )
         self.assertEqual(ledger["approval"]["qualification"], "NOT_EXECUTED")
         self.assertFalse(ledger["approval"]["qualification_execution_authorized"])
-        self.assertEqual(ledger["open_exception"], "IRG-X001_MASTER_MANIFEST_HASH_UNRESOLVED")
+        self.assertEqual(
+            ledger["open_exception"],
+            "IRG-X001_MASTER_MANIFEST_HASH_UNRESOLVED",
+        )
 
 
 if __name__ == "__main__":
