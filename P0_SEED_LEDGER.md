@@ -54,3 +54,9 @@ No production database, provider, corpus, vector index, deployment, release stat
 
 ## Isolated offline evaluator replay (2026-11-20)
 Original SHA-bound evaluator code was assembled in a private temporary workspace. **17/17** core tests passed; a combined subset completed **20 passed and 3 deliberately deselected**. The three deselections concern original frozen master-manifest closure, full bound-file closure and exact builder reproduction; they remain qualification blockers rather than silent passes. See [replay report](evaluation/EVALUATOR_ISOLATED_OFFLINE_REPLAY_20261120.md). No external provider/database/vector calls or serving changes occurred.
+
+## P0 portability control update (2026-11-20)
+- [Portability policy](governance/REFERENCE_PORTABILITY_POLICY.md) formalizes the updated rule: Google Drive is an origin/discovery source, **not a Codex runtime dependency**. The 11-file source register and 10-file evaluator binding are `EXTERNALLY_VERIFIED_NOT_LOCAL`, so they **do not close** the required `source_reference/*`, `source_snapshot/`, or curated historical `tests_reference/` folders.
+- Added the new synthesis and provenance audit documents to the validator's external-storage-URL check; no required Drive link is allowed in these current documents.
+- `V2_EVALUATOR_APPROVAL_v1.json` explicitly limits its own scope and does **not** authorize Git publication by itself. The pending public PR requires separate privacy/publication review before merge.
+- Read-only archive folder enumeration found one available `V2_MASTER_REGRESSION_MANIFEST_v1.json` and one evaluator-version artifact folder. No second original master-manifest body was found there; `IRG-X001` remains unresolved.
