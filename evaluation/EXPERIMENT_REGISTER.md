@@ -1,0 +1,11 @@
+# Experiment register — initial history-backed entries (not substitute for run ledgers)
+| Experiment | Date | Hypothesis | Population | Changed variable | Baseline | Result | Status | Promoted? | Evidence |
+|---|---|---|---|---|---|---|---|---|---|
+| Early V1.5 frozen config | 2026-07-31 | stable bounded hybrid | 132 PDF / 4,173 chunks | release freeze | prior dev | config documented; no new final QA estimate | PROVEN_WITH_GAP | historical only | https://docs.google.com/document/d/1clikto0CgPvarBSqY6XWgCEkf74qNsS8/edit |
+| V2 master population freeze | 2026-09-02 | binding expected behavior | 244 scenarios/245 units | population/gates | prior triage | frozen population; qualification NOT_EXECUTED | BLOCKED | no | https://docs.google.com/document/d/1ZnHzc0VX8PDXmv9PV59yLG7PPQvjHYEM/edit |
+| P1/P2 reconstruction | 2026-10 (history) | structurally recover exact gold | bounded P1/P2 | parent selection | earlier pipeline | reported 100% exact gold@10; no answerability inference | PROVEN_WITH_GAP | no | late project history, run IDs pending |
+| Expansion scale trial | 2026-10-30 (history) | remain robust at scale | 40 selected gold, 10 narrative | expanded corpus | historical October arm | 16/40 vs 13/40; narrative 3/10 vs 0/10 | PARTIAL_GAIN | no | late project history, ledgers pending |
+| Standard vs contextualized full-view P2 | 2026-10-27 onward (history) | full-view enhances unseen outcomes | 17 valid unseen; 20 planned,19 run | +10,868 contextualized views | Standard | context sufficient 3/17 both; evidence@10 5/17 both; wins 0 losses 0 | NO_GAIN | no | paired history, original run pending |
+| Codebase/architecture audit | 2026-10 (history) | serving boundaries comply | bound source per audit | source closure | previous serving | reported prohibited modules 23→0, 36 scoped tests passing; not E2E run | PROVEN_WITH_GAP | no | project history, source pending |
+
+Statuses: PROVEN, PROVEN_WITH_GAP, PARTIAL_GAIN, NO_GAIN, REGRESSION, INVALID, BLOCKED, SUPERSEDED. The historical current/October scale arms are not interchangeable release populations. Never infer confidence intervals from incomparable runs.
