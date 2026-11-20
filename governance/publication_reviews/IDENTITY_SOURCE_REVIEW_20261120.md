@@ -33,3 +33,6 @@ No original source file was copied to the public reference repository. No rewrit
 
 ## Outcome
 This slice establishes *what can be located and authenticated in the identity family*, while explicitly deferring source publication and clean-build promotion. It does not claim P0 completion.
+
+## Approved publication addendum — 2026-11-20
+The user explicitly approved priority 1, public publication of the previously selected identity-family originals. Five implementation modules now reside in `source_reference/identity/`, and three unmodified behavior-test modules in `tests_reference/historical/identity/`. Original and copied byte counts total **138,849**, with per-file source and local SHA-256 equality in the [triage register](IDENTITY_SOURCE_TRIAGE_20261120.json) and verified by `tests_reference/test_identity_publication_review.py`. No redaction or code rewrite occurred. Original historical source revision, coherent checkout, upstream dependency closure, and actual historical test execution remain unverified. The previously recorded `BLOCKED_PENDING_HUMAN_REVIEW` status above describes the *earlier* triage snapshot; this addendum supersedes the publication block for these eight files only.
