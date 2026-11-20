@@ -207,3 +207,61 @@ The reference seed may be declared complete only when all are true:
 Progress is valid and materially improved, but direct historical source, behavior tests, milestone reports, structural research, and late-run provenance are still incomplete.
 
 Do not declare completion from folder existence, `.gitkeep` files, document titles, or passing non-strict seed-integrity CI.
+
+## Rereview — later 2026-11-20
+
+Current main advanced to `27679d8eff53c36a2102b255938ec8212c26dfe9` before this rereview.
+
+### Progress since prior audit
+- File count increased from 115 to 129.
+- Substantive files increased from 82 to 96.
+- Added evaluator approval/provenance, isolated replay, source-binding metadata, portability policy, and source-binding tests.
+- Exact evaluator/source provenance improved materially.
+
+### What did not improve
+The same 11 required evidence areas remain without substantive implementation/report payloads:
+
+- `source_reference/identity/`
+- `source_reference/retrieval/`
+- `source_reference/context/`
+- `source_reference/contracts/`
+- `source_reference/structural/`
+- `source_snapshot/`
+- `research/structural/`
+- `reports/reference/v1/`
+- `reports/reference/v1_5/`
+- `reports/reference/corpus/`
+- `reports/reference/structural/`
+
+The added `source_reference/SOURCE_BINDINGS_20261120.json` is provenance metadata and does not populate those folders.
+
+### Independent source-binding verification
+All 11 files in the source-binding ledger were independently re-fetched from the private historical archive during rereview. Byte counts and SHA-256 values matched **11/11**. Four implementation files and seven additional source/test files were checked; no mismatch was found. A conservative literal-secret scan over the selected Python files found no obvious hard-coded credential assignment.
+
+This upgrades confidence in the ledger from “self-reported binding metadata” to “independently rechecked external provenance.” It does not establish:
+
+- local Codex-accessible implementation source;
+- exact historical Git commit binding;
+- full source-tree consistency;
+- historical runtime equivalence;
+- complete behavior-test coverage.
+
+### New latest-history gap found and corrected
+The previous current-state synthesis stopped at the 2026-11-18 R2 ledger. Project history contains a later 2026-11-19 read-only G2/R1/R0 comparison. The rereview adds it as `HISTORY_REPORTED_UNVERIFIED`:
+
+- campaign `R2-CAMPAIGN-20261111-HANDOFF-001`;
+- candidate 60, `CHECKPOINTED`, no active reservations;
+- manifest SHA-256 `e1e7db9d313e854d7c14ce6c6ff61dc58583e6582af3b02245f006aec3b7c421`;
+- frozen-G2 artifact entries matched 993/993;
+- G2 35/35 is bounded owner-conditioned occurrence retrieval only, not sufficient-context or end-to-end answer proof;
+- Fire Magic historically favored neural top-three evidence, while Bromic/Twin Eagles exposed upstream identifier/metadata losses unrecoverable by reranking.
+
+### Portability defect corrected
+`REFERENCE_INDEX.md` still contained an escalation label pointing to “Drive IMPLEMENTATION_HISTORY,” despite the local file already existing. That was a direct portability defect. The index now points to `lessons/IMPLEMENTATION_HISTORY.md`.
+
+The source/evaluator binding ledgers also exposed private archive locator IDs that Codex cannot use. Those IDs are unnecessary for interpretation and have been removed on the rereview branch; local path + byte count + SHA-256 + status remain the usable provenance identity.
+
+### Rereview verdict
+**PROVENANCE IMPROVED; LOCAL REFERENCE COMPLETION STILL BLOCKED.**
+
+The current seeding process has not taken the shortcut of fabricating source content, and the discovered historical source is authentic by hash. However, metadata about private source is not equivalent to the local historical implementation/reference files required by the seed specification. Strict completion must remain blocked until that contradiction is resolved by either approved local publication/redaction of the needed historical code/tests or an explicit change to the reference-completion contract.
