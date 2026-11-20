@@ -38,3 +38,15 @@ See [reference portability and Drive boundary](governance/REFERENCE_PORTABILITY_
 - [Structural loss boundary](reports/reference/structural/STRUCTURAL_GATE3_LOSS_BOUNDARIES_20260813.md)
 - [Docling procedure research](research/structural/SHADOW_CORPUS_PROCEDURE_HOLDOUT_20260909.md)
 Each has a local `PROVENANCE.json` in the same directory; these are source-grounded **curated summaries, not exact historical source transfers**. The [identity-family source/test transfer register](governance/publication_reviews/IDENTITY_SOURCE_TRIAGE_20261120.json) separately contains eight user-approved byte-identical historical Python files. Earlier index descriptions of source as private apply to the state *before* publication; no other source family is promoted by this update.
+
+## Original local reference code and historical test navigation — 2026-11-20
+- [Identity mechanisms and exact transfers](governance/publication_reviews/IDENTITY_SOURCE_TRIAGE_20261120.json)
+- [Retrieval exact source and SHA-256](source_reference/retrieval/TRANSFER_MANIFEST.json)
+- [Context, citation and response exact source](source_reference/context/TRANSFER_MANIFEST.json)
+- [Ports, metadata and composition contracts](source_reference/contracts/TRANSFER_MANIFEST.json)
+- [Selected structural milestone implementations](source_reference/structural/TRANSFER_MANIFEST.json)
+- [Original archived behavior tests](tests_reference/historical/behavior/TRANSFER_MANIFEST.json)
+- [Source snapshot unavailability and revision boundaries](source_snapshot/SNAPSHOT_MANIFEST.md)
+- [Late run provenance and IRG-X001 unresolved record](reports/reference/audits/LATE_RUN_PROVENANCE_RECONCILIATION_20261120.md)
+
+**Important:** Historical source spans distinct stages. Never treat selected files as an importable, coherent historical production tree; do not infer execution from test existence, or empirical qualification from hash-verified source files. Private frozen question populations remain withheld.
