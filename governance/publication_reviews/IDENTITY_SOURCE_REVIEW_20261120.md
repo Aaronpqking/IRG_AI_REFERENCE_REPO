@@ -8,7 +8,7 @@
 ## Exact original source read, without publication
 Eight original historical Python files were read from the authorized private archive and examined without modifying their bytes: five implementation modules (`query_identity`, `query_normalization`, `source_identity`, `document_applicability`, `product_discovery`) and three behavior-test modules (identifier inventory, source identity registry, document applicability identity).
 
-**All eight parsed with Python AST**. Total original bytes: **138,849**; all eight SHA-256 hashes are recorded against their *actual fetched source bytes* in the adjacent local ledger. **24 syntactic test functions** were identified in the three selected test files; these tests were **not executed**. A file's test count is not evidence of passing behavior.
+**All eight parsed with Python AST**. Total original bytes: **138,849**; all eight newly computed SHA-256 fingerprints are recorded from their *actual fetched source bytes*, without comparison to an independent prior frozen digest in the adjacent local ledger. **24 syntactic test functions** were identified in the three selected test files; these tests were **not executed**. A file's test count is not evidence of passing behavior.
 
 | Mechanism | Source-bound observations | Reproducibility limit |
 |---|---|---|
