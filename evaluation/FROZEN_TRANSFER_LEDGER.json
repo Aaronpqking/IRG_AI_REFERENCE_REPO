@@ -1,13 +1,14 @@
 {
-  "schema_version": "irg.reference.transfer_ledger.1",
+  "schema_version": "irg.reference.transfer_ledger.2",
   "date": "2026-11-20",
   "repository_visibility": "PUBLIC",
-  "hash_authority": "SHA256 of original Drive bytes; transferred files' Git blob SHA-1 compared with source bytes",
+  "hash_authority": "SHA256 of original source bytes; transferred files' local Git blob SHA-1 was compared with the blob computed from those source bytes at transfer time",
+  "codex_portability": "Repository-local paths and cryptographic identities are sufficient; external storage access is not required.",
   "records": [
     {
       "name": "benchmark_population_registry_v1.json",
       "repo_path": "evaluation/frozen/benchmark_population_registry_v1.json",
-      "origin": "https://drive.google.com/file/d/1-Dt_9ZnROzNLCKNRP7poKbVcaKhwVIdR/view",
+      "source_artifact": "benchmark_population_registry_v1.json",
       "sha256": "0b09773f221e2450d6c7c5590c0558585887729596bfe4f358d7b6d3b6732e1f",
       "bytes": 5677,
       "status": "TRANSFERRED_EXACT"
@@ -15,7 +16,7 @@
     {
       "name": "context_serialization_contract_v1.schema.json",
       "repo_path": "evaluation/frozen/context_serialization_contract_v1.schema.json",
-      "origin": "https://drive.google.com/file/d/1YQBLb45ccnhKfKTdksyM2UgQuGGek9yN/view",
+      "source_artifact": "context_serialization_contract_v1.schema.json",
       "sha256": "b62b2cfbf163a99cda8285bed791a7b0724f5ff2d6a6f0ed788aebd9b4ccd25d",
       "bytes": 1214,
       "status": "TRANSFERRED_EXACT"
@@ -23,7 +24,7 @@
     {
       "name": "e2e_metric_registry_v1.json",
       "repo_path": "evaluation/frozen/e2e_metric_registry_v1.json",
-      "origin": "https://drive.google.com/file/d/1i6q9upFkw5gQJZp55SFCBIxsgsVGQ02B/view",
+      "source_artifact": "e2e_metric_registry_v1.json",
       "sha256": "0fabe10c10276bf82979c191a9f4779db959b4f62e847e8bcb8b5ad5466ee2bc",
       "bytes": 42104,
       "status": "TRANSFERRED_EXACT"
@@ -31,7 +32,7 @@
     {
       "name": "V2_GATE_MANIFEST.json",
       "repo_path": "evaluation/frozen/V2_GATE_MANIFEST.json",
-      "origin": "https://drive.google.com/file/d/1ZFuER8yCrijQhaRwpgvN-hRDWrbNwIU0/view",
+      "source_artifact": "V2_GATE_MANIFEST.json",
       "sha256": "9e14682951ddea0b6720e74eecc87c680b5ddce580d8915a3d8918e07acfece0",
       "bytes": 22383,
       "status": "TRANSFERRED_EXACT"
@@ -39,7 +40,7 @@
     {
       "name": "V2_MASTER_REGRESSION_MANIFEST_v1.json",
       "repo_path": "evaluation/frozen/V2_MASTER_REGRESSION_MANIFEST_v1.json",
-      "origin": "https://drive.google.com/file/d/1Hx6xhbvBRfqHRVRqsf8wyq_SfSM4OSe_/view",
+      "source_artifact": "V2_MASTER_REGRESSION_MANIFEST_v1.json",
       "sha256": "fa6b6291079fa0d2c2823a71824e492a80fbc21a0aad5345c91f60d3e5e6fa3e",
       "bytes": 11467,
       "status": "TRANSFERRED_EXACT"
@@ -47,7 +48,7 @@
     {
       "name": "V2_EVALUATOR_MANIFEST_v1.json",
       "repo_path": "evaluation/frozen/V2_EVALUATOR_MANIFEST_v1.json",
-      "origin": "https://drive.google.com/file/d/1_8KX-u66Wxpav-o5QBz8fq2UFwXil0bg/view",
+      "source_artifact": "V2_EVALUATOR_MANIFEST_v1.json",
       "sha256": "2085173fb9871a6a4a2bb6da2960c4163a4a5f3288a2682e71f4f9075e5cd60e",
       "bytes": 6524,
       "status": "TRANSFERRED_EXACT"
@@ -55,7 +56,7 @@
     {
       "name": "V2_EVALUATOR_SCHEMAS_v1.json",
       "repo_path": "evaluation/frozen/V2_EVALUATOR_SCHEMAS_v1.json",
-      "origin": "https://drive.google.com/file/d/1IJ0rXj61CKazfkJBVKees207XJOXuvb_/view",
+      "source_artifact": "V2_EVALUATOR_SCHEMAS_v1.json",
       "sha256": "fdc579b24ef1fd9037cd73a84ec393e4b449941299af411693eca12779687ca0",
       "bytes": 21708,
       "status": "TRANSFERRED_EXACT"
@@ -63,7 +64,7 @@
     {
       "name": "V2_GATE_SCORER_CONTRACTS_v1.md",
       "repo_path": "evaluation/frozen/V2_GATE_SCORER_CONTRACTS_v1.md",
-      "origin": "https://drive.google.com/file/d/1SEC21QThwP7vstC6ftMePyAn2U95Esqc/view",
+      "source_artifact": "V2_GATE_SCORER_CONTRACTS_v1.md",
       "sha256": "7a376ba1ab2775431625468b6e45bc9c859aff2a01c180c80118f9845f556be0",
       "bytes": 50131,
       "status": "TRANSFERRED_EXACT"
@@ -71,7 +72,7 @@
     {
       "name": "V2_EVALUATION_AUTHORITY.md",
       "repo_path": "evaluation/historical/V2_EVALUATION_AUTHORITY.md",
-      "origin": "https://drive.google.com/file/d/1rAplCpFoPNr7X4fmjQRzn0Ep3aJoa0Hs/view",
+      "source_artifact": "V2_EVALUATION_AUTHORITY.md",
       "sha256": "9496133dc2b4fddf8e9406f80070200db138191fff6853ddd05e98e99628f536",
       "bytes": 46948,
       "status": "TRANSFERRED_EXACT"
@@ -79,7 +80,7 @@
     {
       "name": "V2_EVALUATOR_IMPLEMENTATION_REPORT_v1.md",
       "repo_path": "evaluation/historical/V2_EVALUATOR_IMPLEMENTATION_REPORT_v1.md",
-      "origin": "https://drive.google.com/file/d/1eyJn5xrCHRDhWIrBZkW73ydYpC_pzAo3/view",
+      "source_artifact": "V2_EVALUATOR_IMPLEMENTATION_REPORT_v1.md",
       "sha256": "a631fc4e9c0f7e9be88a4687e5233e9e2aae5d62cc282a9ee3b7fafa88797e87",
       "bytes": 4254,
       "status": "TRANSFERRED_EXACT"
@@ -87,18 +88,18 @@
     {
       "name": "V2_MASTER_REGRESSION_POPULATION_v1.jsonl",
       "repo_path": null,
-      "origin": "https://drive.google.com/file/d/1LXK_evi__2z0MN6dtR-68xpyNH538WOb/view",
+      "source_artifact": "V2_MASTER_REGRESSION_POPULATION_v1.jsonl",
       "sha256": "4b561ffea79edc97c270cda38fbd0e5351615c0acd8d8be4eab291a3d504bd8e",
       "bytes": 659697,
-      "status": "VERIFIED_DRIVE_PRIVATE_WITHHELD"
+      "status": "VERIFIED_PRIVATE_WITHHELD"
     },
     {
       "name": "V2_HISTORICAL_QUESTION_TRIAGE_v1.jsonl",
       "repo_path": null,
-      "origin": "https://drive.google.com/file/d/1yNFwnRXeORMxTnIu7DSj6rSWO-iCpgv7/view",
+      "source_artifact": "V2_HISTORICAL_QUESTION_TRIAGE_v1.jsonl",
       "sha256": "8dc936cb0d7c600fdad13592f45f2b564ff8c0b41e9050294373f19432a25e2d",
       "bytes": 284953,
-      "status": "VERIFIED_DRIVE_PRIVATE_WITHHELD"
+      "status": "VERIFIED_PRIVATE_WITHHELD"
     }
   ],
   "integrity_exception": {
@@ -108,6 +109,6 @@
     "master_manifest_sha256_bound_in_evaluator": "9ddf9eaf993a62182ce1c52f550002deb2d3584f12e9a56167fba1fe78df0f3c",
     "resolution": "UNRESOLVED_REQUIRES_VERSION_RECONCILIATION",
     "qualification_impact": "BLOCK_AUTOMATIC_PROMOTION",
-    "notes": "Population SHA binding matches; discrepant master manifest can reflect distinct revisions rather than corruption."
+    "notes": "Population SHA binding matches; discrepant master manifest may reflect distinct revisions. No corruption conclusion is authorized without the missing bound revision."
   }
 }
