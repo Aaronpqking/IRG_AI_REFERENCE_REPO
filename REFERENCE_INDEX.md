@@ -19,3 +19,5 @@ Start at [CURRENT_REFERENCE_STATE.md](CURRENT_REFERENCE_STATE.md); inspect [REFE
 
 **Codex boundary:** This is not a full source checkout. Never assume a referenced file was copied merely because it appears in an index. Require a verified repository path and checksum for frozen empirical authority.
 **Frozen transfer update:** Ten original Drive source artifacts have exact SHA-256 and Git-blob verification in [FROZEN_TRANSFER_LEDGER](evaluation/FROZEN_TRANSFER_LEDGER.json); raw historical question-level population/triage remain withheld. [IRG-X001](evaluation/INTEGRITY_FINDINGS_20261120.md) prevents qualifying mismatched evaluator/master manifest revisions. Validate locally with `python scripts/validate_reference_seed.py` (strict mode rejects blockers).
+
+**Source-binding update:** [Selected Drive source/test hashes](source_reference/SOURCE_BINDINGS_20261120.json), [static source review](reports/reference/audits/GOOGLE_DRIVE_SOURCE_BINDING_20261120.md), and [IRG-X001 hash lineage](evaluation/IRG_X001_MANIFEST_LINEAGE_20261120.md). Source code remains private; the archived source snapshot is **not** an October commit-bound implementation.
