@@ -27,7 +27,9 @@ class ReferencePortabilityTests(unittest.TestCase):
         result = validate()
         self.assertGreater(result["blockers"], 0)
         self.assertFalse(result["completion_ready"])
-        self.assertTrue(any(f["code"] in ("REQUIRED_REFERENCE_AREA_EMPTY", "EMPTY_PLACEHOLDER")
+        self.assertTrue(any(f["code"] == "PRIVATE_SOURCE_NOT_IN_REPO"
+                            for f in result["findings"]))
+        self.assertTrue(any(f["code"] == "MASTER_MANIFEST_REVISION_CONFLICT"
                             for f in result["findings"]))
 
 
