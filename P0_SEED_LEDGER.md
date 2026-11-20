@@ -12,10 +12,10 @@
 ## Outstanding P0 blocks
 1. **IRG-X001:** evaluator manifest binds master regression manifest SHA-256 `9ddf9eaf...`; available original is `fa6b6291...`. Locate/verify the bound revision before evaluating or promoting.
 2. **Private frozen population reproduction:** records are hash-verified in authorized Drive but withheld from this public repository. Qualification must access them privately using hashes and permissions.
-3. **Source/test binding:** old implementation source and test snapshots are not available through the two installed GitHub repositories (reference repo and currently empty technical-data-platform repo). Obtain authorized historical source checkout or the bound tests without pushing sensitive internals into public reference.
+3. **Source/test binding:** a historical `irg_ai-main` source and test tree **was located in Google Drive**; 11 selected files totaling 421,897 bytes were independently SHA-256 hashed and parsed. It is not a Git-commit-bound, internally consistent checkout, and it is not verified as the October 2026 runtime. See [source bindings](source_reference/SOURCE_BINDINGS_20261120.json) and [source review](reports/reference/audits/GOOGLE_DRIVE_SOURCE_BINDING_20261120.md).
 4. **Late P1/P2 and scale experiments:** original full run ledgers, hashes and experiment joins still absent from reference corpus; history-derived results remain provisional.
-5. **Programmatic validator execution:** script is added; independent execution of the GitHub checkout and strict-mode gate still needed. Readback and pure-data binding checks are separate from executing that Python script.
-6. **P0 source manifest completeness:** a smaller subset of priority artifact transfers is complete; the full original seed manifest requires an item-by-item reconciliation.
+5. **Programmatic validator execution:** offline GitHub Actions previously passed; strict-mode must still intentionally reject qualification blockers and the newly added source metadata checks must pass CI.
+6. **P0 source manifest completeness:** 30 destination groups are inventoried in [P0_COVERAGE_MATRIX](P0_COVERAGE_MATRIX.md), with 15 implemented and 15 partial; selected source availability has improved, but empirical proof remains partial.
 
 ## Guardrails
 Repository is **public**. Do not upload unredacted conversation rows, private read-model traces, credentials, or entire source trees. Original frozen evidence, historical runtime, policy-only and synthesized conclusions retain separate states. The evaluator may not claim `QUALIFICATION_PASS` from the population freeze.
@@ -25,3 +25,9 @@ Repository is **public**. Do not upload unredacted conversation rows, private re
 
 ## Verified CI execution
 GitHub Actions `Reference evidence validation` run **44689311401** passed on this review branch. It executed the offline validator, unit-test discovery, and a check that P0 retains explicit blockers. This is a passing *seed integrity* check, not a passing qualification gate. Drive revision history was also checked for IRG-X001; only the present revision is exposed for each manifest, so the discrepancy remains open.
+
+## 2026-11-20 source discovery and integrity lineage
+- Google Drive `irg_ai-main` contains the original `src/`, `tests/` and `src/v2_evaluator/` directories. Selected source evidence is available; GitHub source repo availability and Drive source availability must not be conflated.
+- 11 source/test files: source bytes read, hashes recorded and AST-parsed; 130 historical `test_*` function definitions observed but **none executed**.
+- [IRG-X001 lineage analysis](evaluation/IRG_X001_MANIFEST_LINEAGE_20261120.md) identifies three distinct master-manifest digests (pre-scorer, evaluator-bound, accessible Drive) with the evaluator-bound bytes still missing.
+- Source code remains outside the public reference repository. Source metadata alone never qualifies a release or a model response.
