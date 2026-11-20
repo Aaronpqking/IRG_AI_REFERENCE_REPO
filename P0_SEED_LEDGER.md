@@ -22,3 +22,6 @@ Repository is **public**. Do not upload unredacted conversation rows, private re
 
 ## Status
 **P0_REFERENCE_SEED_EXPANDED / NOT FULLY QUALIFIED.** No production/runtime database, model, corpus, Qdrant, deployment or release state changed.
+
+## Verified CI execution
+GitHub Actions `Reference evidence validation` run **44689311401** passed on this review branch. It executed the offline validator, unit-test discovery, and a check that P0 retains explicit blockers. This is a passing *seed integrity* check, not a passing qualification gate. Drive revision history was also checked for IRG-X001; only the present revision is exposed for each manifest, so the discrepancy remains open.

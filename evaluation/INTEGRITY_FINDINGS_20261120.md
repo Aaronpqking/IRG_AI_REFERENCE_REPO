@@ -27,3 +27,6 @@ V2 historical artifacts remain **NOT_EXECUTED** for release qualification at the
 
 ## Programmatic check
 Run `python scripts/validate_reference_seed.py`; `--strict` requires no blockers. No live provider, product database, Qdrant or corpus mutation is part of this check.
+
+## Revision-history check
+Google Drive revision listings were examined for the available master regression manifest and evaluator manifest. Both exposed only one revision (timestamp 2026-09-30), with no previousRevisionId. The evaluator-bound hash `9ddf9eaf...` could not be recovered from this revision history. IRG-X001 remains unresolved; the proper next source is the original bound checkout or an archived artifact hash index.

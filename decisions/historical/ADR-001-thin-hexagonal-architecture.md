@@ -1,5 +1,3 @@
-<!-- Historical direct text from Google Drive at https://docs.google.com/document/d/1vGuDSv6VF-qm5A9RdNc59_Ovv4bqyIxT/edit; original source version and byte hash not independently established. Content copy not frozen empirical qualification. -->
-
 # ADR-001 - Thin Hexagonal Architecture
 
 Status: Accepted
