@@ -4,7 +4,7 @@
 ## Directly bounded historical evidence
 - V1.5 freeze, 2026-07-31: 132 approved PDFs; 4,173 chunks; OpenAI text-embedding-3-small 1536 dimensions, Qdrant AOG-TE/dense; hybrid candidates/final/RRF 50/5/60, lexical pool 120; shared 45,000-character context bound; the mutable golden latest artifact was an older failed run and explicitly **not** proof of V1.5 answer quality. Source: https://docs.google.com/document/d/1clikto0CgPvarBSqY6XWgCEkf74qNsS8/edit.
 - Historical V1.5 release baseline was tagged with product DB discovery plus approved PDF hybrid retrieval and a shared bounded context; internal pilot candidate, not production-ready. Source: https://docs.google.com/document/d/17Ei0avusADOG5nlexfLAY4rnAypxLuqu/edit.
-- V2 frozen master population report dated 2026-09-02: 615 unique questions screened, 208 retained historical + 36 expansion = 244 scenarios, 245 expectation units; 407 excluded before freeze. Population frozen; evaluator implementation blocked and release qualification **NOT_EXECUTED** at that report date. Source: https://docs.google.com/document/d/1ZnHzc0VX8PDXmv9PV59yLG7PPQvjHYEM/edit.
+- V2 frozen master population report dated 2026-09-02: 615 unique questions screened, 208 retained historical + 36 expansion = 244 scenarios, 245 expectation units; 407 excluded before freeze. Population frozen; evaluator implementation was still awaiting approval **at that report date**. A separately retrieved owner approval dated 2026-09-02 verifies `v2-evaluator.1` as `AUTHORITATIVE_FROZEN`, binding all 10 evaluator source/test hashes; release qualification remained **NOT_EXECUTED**. See [reconciliation](evaluation/EVALUATOR_APPROVAL_RECONCILIATION_20261120.md). Source: https://docs.google.com/document/d/1ZnHzc0VX8PDXmv9PV59yLG7PPQvjHYEM/edit.
 - IRG_AUTHORITY_POLICY_V1 is explicitly POLICY_ONLY_NOT_ACTIVATED. Source: https://docs.google.com/document/d/17L-A-sQILRF7mp3xHAYhFsF88AWsyz6J/edit.
 
 ## Later project-history observations requiring frozen artifact import to strengthen authority
@@ -17,4 +17,4 @@
 ## Decision posture
 **Carry forward:** exact identity and document applicability; separate DB facts vs manufacturer facts; canonical evidence/provenance; hybrid channels only where measured; bounded structural reconstruction; context sufficiency; explicit abstention/citations; immutable evaluations.
 **Do not automatically carry forward:** full-view proliferation, giant source graph, unactivated authority policy, feature-flag maze or old code paths.
-**Open:** exact fresh holdout qualification; latency/storage/cost curves; all frozen payloads; negative-case coverage; authenticated operational release gates. See P0_SEED_LEDGER.md.
+**Open:** exact fresh holdout qualification; latency/storage/cost curves; specific missing master-manifest revision; private frozen cases; late October run ledgers; negative-case coverage; authenticated operational release gates. See P0_SEED_LEDGER.md.
