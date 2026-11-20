@@ -1,0 +1,54 @@
+{
+  "schema_version": "v2-evaluator-focused-test-evidence.1",
+  "evaluator_version": "v2-evaluator.1",
+  "status": "PASS",
+  "runs": [
+    {
+      "name": "core_evaluator",
+      "command": ".\\.venv\\Scripts\\python.exe -m pytest tests/test_v2_evaluator.py -q",
+      "collected": 17,
+      "passed": 17,
+      "failed": 0
+    },
+    {
+      "name": "focused_evaluator_and_artifacts",
+      "command": ".\\.venv\\Scripts\\python.exe -m pytest tests/test_v2_evaluator.py tests/test_v2_evaluator_artifacts.py -q",
+      "collected": 23,
+      "passed": 23,
+      "failed": 0
+    },
+    {
+      "name": "broader_offline_authority_regression",
+      "command": ".\\.venv\\Scripts\\python.exe -m pytest tests/test_v2_evaluator.py tests/test_v2_evaluator_artifacts.py tests/test_v2_gate_scorer_contract_document.py tests/test_v2_master_eval_population_artifacts.py -q",
+      "collected": 43,
+      "passed": 43,
+      "failed": 0
+    }
+  ],
+  "collected": 43,
+  "passed": 43,
+  "failed": 0,
+  "coverage": [
+    "qualification plan schema and immutability",
+    "logical-attempt append-only ledger",
+    "record schemas",
+    "deterministic scorer primitives",
+    "V2-G01",
+    "V2-G02",
+    "V2-G03",
+    "V2-G05",
+    "V2-G06",
+    "V2-G07",
+    "V2-G18",
+    "human claim-inventory completeness",
+    "blinded human residual adjudication",
+    "critical cross-subject veto",
+    "independent three-run aggregation",
+    "pooled-result non-rescue",
+    "non-blocking expectation isolation",
+    "mechanical denominator derivation"
+  ],
+  "provider_calls": 0,
+  "qualification_executed": false,
+  "production_runtime_mutated": false
+}
