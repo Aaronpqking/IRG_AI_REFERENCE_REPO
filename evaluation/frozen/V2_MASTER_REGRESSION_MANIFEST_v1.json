@@ -1,0 +1,228 @@
+{
+  "approval": {
+    "approval_state": "AUTHORITATIVE_FROZEN",
+    "approved_at": "2026-09-02",
+    "approved_by": "Aaron",
+    "authority_model": "SOLE_AUTHORITY",
+    "authority_scope": "V2_MASTER_EVALUATION_POPULATION_V1",
+    "behavior_expansion_1_through_36": "USER_APPROVED_2026_09_02_WITH_RECORDED_CASE_CONDITIONS",
+    "case_19_release_class": "REGRESSION_NON_BLOCKING_FUTURE_CONFIGURATION_ACTIVATION",
+    "case_34_release_class": "MIXED_BLOCKING_IDENTITY_AND_NON_BLOCKING_CONFIGURATION_OBSERVATION",
+    "case_36_release_class": "REGRESSION_NON_BLOCKING_FUTURE_CONFIGURATION_ACTIVATION",
+    "configuration_contract": "OBSERVE_ONLY",
+    "designated_approver": "Aaron",
+    "frozen_at": "2026-09-02"
+  },
+  "approved_population_policies": {
+    "all_prefrozen_applicable_items_count_in_denominator": true,
+    "ambiguity_requires_clarification": true,
+    "authority_owner": "Aaron",
+    "change_requires_new_version_hashes_and_approval": [
+      "scenario_membership",
+      "inclusion_or_exclusion_decision",
+      "factual_label",
+      "expected_behavior",
+      "source_or_page_authority",
+      "gate_applicability",
+      "blocking_classification"
+    ],
+    "clarification_passes_only_when_expected": true,
+    "missing_evidence_requires_notification_or_abstention": true,
+    "missing_required_approved_corpus_evidence": "CORPUS_COVERAGE_FAILURE",
+    "observe_only_configuration_can_block_v2_0": false,
+    "post_run_failure_to_exclusion_allowed": false
+  },
+  "artifact_sha256": {
+    "population": "4b561ffea79edc97c270cda38fbd0e5351615c0acd8d8be4eab291a3d504bd8e",
+    "report": "fd070296282adbb498777699a937d621f02a1c4d9efcd3426ac7d83547e90228",
+    "triage": "8dc936cb0d7c600fdad13592f45f2b564ff8c0b41e9050294373f19432a25e2d"
+  },
+  "artifact_version": "v1",
+  "artifacts": {
+    "population": "docs/evaluation/V2_MASTER_REGRESSION_POPULATION_v1.jsonl",
+    "report": "docs/evaluation/V2_MASTER_REGRESSION_REPORT_v1.md",
+    "triage": "docs/evaluation/V2_HISTORICAL_QUESTION_TRIAGE_v1.jsonl"
+  },
+  "builder_version": "v2-master-eval-builder.2",
+  "counts": {
+    "behavior_expansion_included": 36,
+    "blocking_expectations": 196,
+    "expectations": 245,
+    "historical_case_type_counts": {
+      "historical_controlled_discovery_ambiguous": 5,
+      "historical_controlled_discovery_exact_identifier": 20,
+      "historical_controlled_discovery_unsupported": 5,
+      "historical_golden_applied_fitment": 2,
+      "historical_golden_atomic_extraction": 19,
+      "historical_golden_staff_natural_lookup": 8,
+      "historical_identity_policy_document_applicability": 7,
+      "historical_identity_policy_family_ambiguous": 10,
+      "historical_identity_policy_identifier_parsing": 4,
+      "historical_identity_policy_insufficient_evidence": 9,
+      "historical_identity_policy_role_resolution": 6,
+      "historical_live_policy_boundary": 10,
+      "historical_technical_DIRECT_TECHNICAL_PRODUCT": 5,
+      "historical_technical_RELATED_COMPONENT_RELATIONSHIP": 3,
+      "historical_technical_RELATED_PRODUCT_TECHNICAL_REQUEST": 3,
+      "historical_unified_ambiguity_unsafe": 5,
+      "historical_unified_general_database": 20,
+      "historical_v2_s2d": 22,
+      "historical_v2_s3_a_single_product": 5,
+      "historical_v2_s3_b_two_product": 5,
+      "historical_v2_s3_c_followup_reuse": 5,
+      "historical_v2_s3_d_three_product": 5,
+      "historical_v2_s3_e_db_pdf_reconciliation": 5,
+      "historical_v2_s3_f_numeric": 5,
+      "historical_v2_s3_g_missing_absence": 5,
+      "historical_v2_s3_h_fitment_compatibility": 5,
+      "historical_v2_s3_i_adversarial_hallucination": 5
+    },
+    "historical_excluded": 407,
+    "historical_included": 208,
+    "historical_normalized_population_reviewed": 615,
+    "master_population": 244,
+    "release_blocking_scenarios": 195,
+    "release_class_counts": {
+      "CONTRACT_REGRESSION_NON_BLOCKING": 45,
+      "MIXED_BLOCKING_IDENTITY_AND_NON_BLOCKING_CONFIGURATION_OBSERVATION": 1,
+      "REGRESSION_NON_BLOCKING_FUTURE_CONFIGURATION_ACTIVATION": 2,
+      "REGRESSION_NON_BLOCKING_OUT_OF_SCOPE": 1,
+      "RELEASE_BLOCKING_CURRENT": 195
+    },
+    "response_state_counts": {
+      "ANSWER_QUALIFIED": 59,
+      "ANSWER_SUPPORTED": 134,
+      "CLARIFICATION_REQUIRED": 51
+    },
+    "triage_reason_counts": {
+      "FUTURE_SECURITY_SCOPE_NOT_V2_0": 21,
+      "GOLDEN_CANDIDATE_NOT_CONFIRMED_OR_SOURCE_NOT_VERIFIED": 1,
+      "NON_PRODUCT_OR_ADMIN_PROMPT": 8,
+      "NO_APPROVED_STABLE_IDENTITY_OR_FACT_LABEL": 30,
+      "NO_INDEPENDENT_AUTHORITATIVE_EXPECTED_BEHAVIOR": 271,
+      "PRIVACY_OR_UNSTRUCTURED_SERVICE_TICKET": 11,
+      "SUPERSEDED_ANSWERABLE_LABEL_REQUIRES_SOURCE_MIGRATION": 12,
+      "SUPERSEDED_OR_UNVERIFIED_HISTORICAL_FACT_EXPECTATION": 53
+    }
+  },
+  "deduplication": {
+    "method": "Unicode NFKC, casefold, dash normalization, non-word collapse, whitespace collapse",
+    "rationale": "Natural staff wording is an evaluation dimension; only normalized-literal duplicates are merged.",
+    "wording_variants_retained": true
+  },
+  "freeze_status": "AUTHORITATIVE_FROZEN",
+  "g06_severity_model": {
+    "CRITICAL": [
+      "safety",
+      "gas",
+      "electrical",
+      "venting",
+      "clearances",
+      "installation",
+      "hazardous compatibility/fitment",
+      "equipment-damage-risk"
+    ],
+    "MAJOR": "materially incorrect product/specification/technical attribution without direct safety impact",
+    "MINOR": "low-impact factual or presentation defect",
+    "pass_threshold": "each run: 0 critical unsupported claims and <=1% unsupported substantive claims; pooled reporting cannot rescue"
+  },
+  "generation_policy": {
+    "best_of_three_allowed": false,
+    "complete_qualification_runs": 3,
+    "critical_unsupported_claims_allowed_per_run": 0,
+    "individual_failed_case_retry_selection_allowed": false,
+    "pooled_metrics": "REQUIRED_SUPPLEMENTAL_REPORTING_ONLY",
+    "pooled_metrics_can_rescue_failed_run": false,
+    "provider_dependent_gate_pass_rule": "EVERY_COMPLETE_RUN_INDEPENDENTLY_PASSES",
+    "same_frozen_population": true,
+    "same_provider_model_prompt": true,
+    "stochasticity": "DETERMINISTIC_OR_LOWEST_SUPPORTED"
+  },
+  "global_denominator_contract": {
+    "correction_requires_new_dataset_version": true,
+    "post_run_exclusions_allowed": false,
+    "rule": "100_PERCENT_OF_PREFROZEN_APPLICABLE_POPULATION"
+  },
+  "global_gate_contracts": {
+    "V2-G01": {
+      "applicability_rule": "qualification_eligible == true and retrieval_invoked == true",
+      "denominator_rule": "all eligible retrieval-bearing logical attempts",
+      "numerator_rule": "eligible retrieval-bearing logical attempts with valid required-lane accounting disposition",
+      "pass_threshold": "100%",
+      "population_source": "execution_ledger",
+      "scenario_applicable_gates_authoritative": false
+    },
+    "V2-G18": {
+      "applicability_rule": "qualification_eligible == true",
+      "denominator_rule": "all eligible qualification logical attempts",
+      "individual_retry_can_erase_failure": false,
+      "numerator_rule": "eligible logical attempts classified SYSTEM_FAILURE",
+      "pass_threshold": "<=1%",
+      "population_source": "attempt_ledger",
+      "run_invalidation_is_exclusion": false,
+      "run_invalidation_treatment": "INVALIDATE_FULL_RUN",
+      "scenario_applicable_gates_authoritative": false,
+      "system_failure_treatment": "COUNTS_AS_FAILURE"
+    }
+  },
+  "immutability": {
+    "candidate_overwrite_same_version_allowed": false,
+    "decision_lock_status": "AUTHORITATIVE_FROZEN",
+    "population_or_label_change_requires_new_version": true,
+    "post_run_exclusions_allowed": false,
+    "triage_decision_change_requires_new_version": true,
+    "version_locked": true
+  },
+  "live_authority": {
+    "conversation_history_sha256": "baefbf9a227a3807d1af765465d268e353d89fc3dc2ce048a295d355548a0979",
+    "conversation_user_turn_count": 568,
+    "database": "flamy_ai_db",
+    "product_identity_snapshot_sha256": "cc9cf92468ddb15d746fa7584e2828d6d22f88b4ff0e3c1fe1d7bed7ffef87a0",
+    "product_row_count": 5121,
+    "query_policy": "SELECT_ONLY",
+    "server_read_only": false,
+    "server_super_read_only": false
+  },
+  "release_qualification_status": "NOT_EXECUTED",
+  "schema_contract": {
+    "expectation_id_globally_unique": true,
+    "expectation_unit_required_per_scenario": true,
+    "gate_contract_version": "docs/evaluation/V2_GATE_MANIFEST.json@irg.v2.evaluation_gate_manifest.v1",
+    "gate_scorer_contract_version": "docs/evaluation/V2_GATE_SCORER_CONTRACTS_v1.md@v1",
+    "population_schema": "v2_master_regression_population.v2",
+    "scoring_contract_version": "docs/EVALUATION_SCORING_CONTRACT.md@v2-expectation-units-2026-09-02",
+    "triage_schema": "v2_historical_question_triage.v1"
+  },
+  "schema_version": "v2_master_regression_manifest.v2",
+  "scorer_contract_authority": {
+    "approved_at": "2026-09-02",
+    "approved_by": "Aaron",
+    "evaluator_implementation_status": "BLOCKED_PENDING_IMPLEMENTATION",
+    "path": "docs/evaluation/V2_GATE_SCORER_CONTRACTS_v1.md",
+    "pre_approval_candidate_sha256": "e01bd5ea5673200c03c1aa2a87ce902b92221dd592a850184823c7e29dd5bc70",
+    "qualification_status": "NOT_EXECUTED",
+    "scorer_contract_sha256": "7a376ba1ab2775431625468b6e45bc9c859aff2a01c180c80118f9845f556be0",
+    "scorer_contract_version": "v1",
+    "status": "AUTHORITATIVE_FROZEN"
+  },
+  "source_hashes": {
+    ".tmp/v2-s3-validation-experiment-20260807/fixtures.json": "b6fe485f10ea2dd459dcdc4a2d779dc307b2e023b85d69d65508856ed1466f88",
+    "data/evals/ms6_s4r2_identity_resolution_evidence_gate.jsonl": "636f4d34fcb51db19839f6c2df0520aeb16baeb394e848e7f5b41981f462f622",
+    "data/evals/ms6_s5_technical_answer_validation.jsonl": "74dc7ac5e76462778dbc43269e89c991d7c209848e188c195fbc82f51c16cfcd",
+    "data/evals/v1_5_controlled_discovery.jsonl": "562fd04f49d811bca773ab6714ba6c5c34f093b79f4d6a7426b71cf2ac19c221",
+    "data/evals/v1_5_unified_answering.jsonl": "0fd2499dd0c63a65ae3dd3caecc0bb6bca328d20901c13f76c264fa5795e7dbd",
+    "data/golden_questions.jsonl": "763c3ec1e5dcfc0fe55d092d58debac9df9a139ea8f0821873303ac8a94cb7be",
+    "docs/EVALUATION_SCORING_CONTRACT.md": "407b2fdd0e485e24ba46138e20e76feddf6f71663d6bcd21d421b192c7a19ba0",
+    "docs/PRODUCT_CONFIGURATION_OBSERVE_CONTRACT.md": "7287d7b911f5bbc1a2daf991343409cd5ce3a242d6221b135fe240d06db17ff3",
+    "docs/PRODUCT_DB_FIELD_AUTHORITY.md": "670dca5aa153ddc9a6df9e4cea5d0b42f8fa388b36e6e699fd64d738517d6805",
+    "docs/V2_PRODUCT_CONTRACT.md": "343f427a36281426e6acfb4ea34aae38a60ca29651681267f93955fbd2c4df12",
+    "docs/evaluation/V2_EVALUATION_AUTHORITY.md": "9496133dc2b4fddf8e9406f80070200db138191fff6853ddd05e98e99628f536",
+    "docs/evaluation/V2_GATE_MANIFEST.json": "9e14682951ddea0b6720e74eecc87c680b5ddce580d8915a3d8918e07acfece0",
+    "docs/evaluation/V2_GATE_SCORER_CONTRACTS_v1.md": "7a376ba1ab2775431625468b6e45bc9c859aff2a01c180c80118f9845f556be0",
+    "docs/evaluation/candidates/V2_BEHAVIOR_EXPANSION_QUESTIONS_20260902.jsonl": "44ea5f5423ad9e4a33b6f962bd3cc620b35fba92e7ce145eb1f63642cadf2327",
+    "reports/V2_S2D_RETRIEVAL_RESULTS.jsonl": "d740db2c8c41b6a0a0f50531d22c6b304832a39ee6226cb07692674b1b5087c4",
+    "src/scripts/build_v2_master_eval_population.py": "f5b5534b74d4c8901d4c2a6e1b4e49ad1b337821eff54f445a84c7bce4db27ca",
+    "src/v2_evaluation_contract.py": "99f55898bd8ba0f1f1c4e390b090aba2c8b680d39de2ac5503d1a45646920a4e"
+  },
+  "status": "AUTHORITATIVE_FROZEN"
+}

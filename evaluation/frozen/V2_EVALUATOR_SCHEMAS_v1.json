@@ -1,0 +1,835 @@
+{
+  "additional_properties_policy": "FORBIDDEN",
+  "definitions": {
+    "AtomicClaimRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "python_type": "str"
+        },
+        "claim_type": {
+          "python_type": "str"
+        },
+        "deterministic_checks": {
+          "python_type": "Mapping[str, bool]"
+        },
+        "evaluation_plan_id": {
+          "python_type": "str"
+        },
+        "evidence_owners": {
+          "python_type": "tuple[str, ...]"
+        },
+        "exact_claim_text": {
+          "python_type": "str"
+        },
+        "expectation_id": {
+          "python_type": "str"
+        },
+        "extractor_version": {
+          "python_type": "str"
+        },
+        "final_support_status": {
+          "python_type": "str"
+        },
+        "is_atomic": {
+          "python_type": "bool"
+        },
+        "logical_attempt_id": {
+          "python_type": "str"
+        },
+        "normalized_claim": {
+          "python_type": "str"
+        },
+        "provisional_support_status": {
+          "python_type": "str"
+        },
+        "reason_codes": {
+          "python_type": "tuple[str, ...]"
+        },
+        "response_sha256": {
+          "python_type": "str"
+        },
+        "run_id": {
+          "python_type": "str"
+        },
+        "scenario_id": {
+          "python_type": "str"
+        },
+        "scorer_method": {
+          "python_type": "str"
+        },
+        "semantic_review_required": {
+          "python_type": "bool"
+        },
+        "severity": {
+          "python_type": "str"
+        },
+        "span_end": {
+          "python_type": "int"
+        },
+        "span_start": {
+          "python_type": "int"
+        },
+        "subject_owner": {
+          "python_type": "str | None"
+        },
+        "support_authority_type": {
+          "python_type": "str | None"
+        },
+        "supporting_evidence_ids": {
+          "python_type": "tuple[str, ...]"
+        },
+        "supporting_pages": {
+          "python_type": "tuple[int, ...]"
+        },
+        "supporting_paths": {
+          "python_type": "tuple[str, ...]"
+        },
+        "supporting_source_types": {
+          "python_type": "tuple[str, ...]"
+        },
+        "turn_index": {
+          "python_type": "int"
+        }
+      },
+      "required": [
+        "claim_id",
+        "evaluation_plan_id",
+        "logical_attempt_id",
+        "run_id",
+        "scenario_id",
+        "expectation_id",
+        "turn_index",
+        "response_sha256",
+        "span_start",
+        "span_end",
+        "exact_claim_text",
+        "normalized_claim",
+        "claim_type",
+        "subject_owner",
+        "severity",
+        "supporting_evidence_ids",
+        "supporting_source_types",
+        "supporting_paths",
+        "supporting_pages",
+        "evidence_owners",
+        "support_authority_type",
+        "deterministic_checks",
+        "semantic_review_required",
+        "provisional_support_status",
+        "final_support_status",
+        "scorer_method",
+        "extractor_version",
+        "is_atomic",
+        "reason_codes"
+      ],
+      "type": "object"
+    },
+    "ClaimAdjudicationRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "adjudicated_at": {
+          "python_type": "str"
+        },
+        "blinded_to_aggregate_outcome": {
+          "python_type": "bool"
+        },
+        "blinded_to_release_effect": {
+          "python_type": "bool"
+        },
+        "claim_id": {
+          "python_type": "str"
+        },
+        "rationale_code": {
+          "python_type": "str"
+        },
+        "reviewer": {
+          "python_type": "str"
+        },
+        "reviewer_kind": {
+          "python_type": "str"
+        },
+        "verdict": {
+          "python_type": "str"
+        }
+      },
+      "required": [
+        "claim_id",
+        "reviewer",
+        "reviewer_kind",
+        "verdict",
+        "rationale_code",
+        "adjudicated_at",
+        "blinded_to_aggregate_outcome",
+        "blinded_to_release_effect"
+      ],
+      "type": "object"
+    },
+    "ClaimCompletenessReview": {
+      "additionalProperties": false,
+      "properties": {
+        "completeness_status": {
+          "python_type": "str"
+        },
+        "corrected_claim_inventory_version": {
+          "python_type": "str | None"
+        },
+        "extracted_claim_count": {
+          "python_type": "int"
+        },
+        "logical_attempt_id": {
+          "python_type": "str"
+        },
+        "omitted_claims": {
+          "python_type": "tuple[str, ...]"
+        },
+        "response_sha256": {
+          "python_type": "str"
+        },
+        "reviewed_at": {
+          "python_type": "str"
+        },
+        "reviewer": {
+          "python_type": "str"
+        },
+        "reviewer_kind": {
+          "python_type": "str"
+        }
+      },
+      "required": [
+        "logical_attempt_id",
+        "response_sha256",
+        "extracted_claim_count",
+        "reviewer",
+        "reviewer_kind",
+        "completeness_status",
+        "omitted_claims",
+        "corrected_claim_inventory_version",
+        "reviewed_at"
+      ],
+      "type": "object"
+    },
+    "IdentityResolutionResult": {
+      "additionalProperties": false,
+      "properties": {
+        "actual_canonical_identity_set": {
+          "python_type": "tuple[str, ...]"
+        },
+        "actual_clarification_targets": {
+          "python_type": "tuple[str, ...]"
+        },
+        "actual_resolution_cardinality": {
+          "python_type": "int"
+        },
+        "actual_resolution_state": {
+          "python_type": "str"
+        },
+        "actual_response_state": {
+          "python_type": "str"
+        },
+        "clarification_actual": {
+          "python_type": "bool"
+        },
+        "clarification_expected": {
+          "python_type": "bool"
+        },
+        "expectation_id": {
+          "python_type": "str"
+        },
+        "expected_clarification_targets": {
+          "python_type": "tuple[str, ...]"
+        },
+        "expected_identity_set": {
+          "python_type": "tuple[str, ...]"
+        },
+        "expected_resolution_cardinality": {
+          "python_type": "int"
+        },
+        "expected_resolution_state": {
+          "python_type": "str"
+        },
+        "expected_response_state": {
+          "python_type": "str"
+        },
+        "frozen_label_sha256": {
+          "python_type": "str"
+        },
+        "logical_attempt_id": {
+          "python_type": "str"
+        },
+        "raw_discovery_candidates": {
+          "python_type": "tuple[str, ...]"
+        },
+        "run_id": {
+          "python_type": "str"
+        },
+        "selected_identity": {
+          "python_type": "str | None"
+        },
+        "subject_id": {
+          "python_type": "str"
+        }
+      },
+      "required": [
+        "logical_attempt_id",
+        "run_id",
+        "expectation_id",
+        "subject_id",
+        "expected_resolution_state",
+        "actual_resolution_state",
+        "expected_identity_set",
+        "actual_canonical_identity_set",
+        "raw_discovery_candidates",
+        "clarification_expected",
+        "clarification_actual",
+        "expected_clarification_targets",
+        "actual_clarification_targets",
+        "expected_response_state",
+        "actual_response_state",
+        "expected_resolution_cardinality",
+        "actual_resolution_cardinality",
+        "selected_identity",
+        "frozen_label_sha256"
+      ],
+      "type": "object"
+    },
+    "LogicalAttemptRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "application_retry_count": {
+          "python_type": "int"
+        },
+        "ended_at": {
+          "python_type": "str"
+        },
+        "evaluation_plan_id": {
+          "python_type": "str"
+        },
+        "expectation_id": {
+          "python_type": "str | None"
+        },
+        "final_disposition": {
+          "python_type": "str | None"
+        },
+        "logical_attempt_id": {
+          "python_type": "str"
+        },
+        "physical_call_count": {
+          "python_type": "int"
+        },
+        "provider_dependent": {
+          "python_type": "bool"
+        },
+        "provider_error_class": {
+          "python_type": "str | None"
+        },
+        "qualification_eligible": {
+          "python_type": "bool"
+        },
+        "release_blocking": {
+          "python_type": "bool"
+        },
+        "response_sha256": {
+          "python_type": "str | None"
+        },
+        "response_state": {
+          "python_type": "str | None"
+        },
+        "retrieval_invoked": {
+          "python_type": "bool"
+        },
+        "retry_count": {
+          "python_type": "int"
+        },
+        "retry_reason": {
+          "python_type": "str | None"
+        },
+        "run_id": {
+          "python_type": "str"
+        },
+        "run_invalidation_class": {
+          "python_type": "str | None"
+        },
+        "scenario_id": {
+          "python_type": "str"
+        },
+        "started_at": {
+          "python_type": "str"
+        },
+        "system_failure_class": {
+          "python_type": "str | None"
+        },
+        "terminal_status": {
+          "python_type": "str"
+        },
+        "turn_id": {
+          "python_type": "str"
+        },
+        "turn_index": {
+          "python_type": "int"
+        }
+      },
+      "required": [
+        "logical_attempt_id",
+        "evaluation_plan_id",
+        "run_id",
+        "scenario_id",
+        "expectation_id",
+        "turn_index",
+        "turn_id",
+        "qualification_eligible",
+        "release_blocking",
+        "provider_dependent",
+        "retrieval_invoked",
+        "started_at",
+        "ended_at",
+        "terminal_status",
+        "response_state",
+        "system_failure_class",
+        "run_invalidation_class",
+        "response_sha256",
+        "physical_call_count",
+        "retry_count",
+        "retry_reason",
+        "provider_error_class",
+        "final_disposition",
+        "application_retry_count"
+      ],
+      "type": "object"
+    },
+    "PhysicalCallRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "ended_at": {
+          "python_type": "str"
+        },
+        "logical_attempt_id": {
+          "python_type": "str"
+        },
+        "model": {
+          "python_type": "str"
+        },
+        "physical_call_index": {
+          "python_type": "int"
+        },
+        "provider": {
+          "python_type": "str"
+        },
+        "provider_error_class": {
+          "python_type": "str | None"
+        },
+        "retry_reason": {
+          "python_type": "str | None"
+        },
+        "started_at": {
+          "python_type": "str"
+        },
+        "terminal_result": {
+          "python_type": "str"
+        }
+      },
+      "required": [
+        "logical_attempt_id",
+        "physical_call_index",
+        "provider",
+        "model",
+        "started_at",
+        "ended_at",
+        "retry_reason",
+        "provider_error_class",
+        "terminal_result"
+      ],
+      "type": "object"
+    },
+    "QualificationPlan": {
+      "additionalProperties": false,
+      "properties": {
+        "corpus_authority": {
+          "python_type": "str"
+        },
+        "corpus_collection": {
+          "python_type": "str"
+        },
+        "corpus_version": {
+          "python_type": "str"
+        },
+        "evaluation_plan_id": {
+          "python_type": "str"
+        },
+        "evaluator_version": {
+          "python_type": "str"
+        },
+        "frozen_identity_label_sha256_by_unit": {
+          "python_type": "Mapping[str, str]"
+        },
+        "frozen_transition_label_sha256_by_unit": {
+          "python_type": "Mapping[str, str]"
+        },
+        "gate_manifest_schema_version": {
+          "python_type": "str"
+        },
+        "gate_manifest_sha256": {
+          "python_type": "str"
+        },
+        "generated_at": {
+          "python_type": "str | None"
+        },
+        "generation_dependent": {
+          "python_type": "bool"
+        },
+        "generator_model": {
+          "python_type": "str | None"
+        },
+        "generator_provider": {
+          "python_type": "str | None"
+        },
+        "master_manifest_sha256": {
+          "python_type": "str"
+        },
+        "non_blocking_expectation_ids": {
+          "python_type": "tuple[str, ...]"
+        },
+        "plan_sha256": {
+          "python_type": "str"
+        },
+        "population_sha256": {
+          "python_type": "str"
+        },
+        "prompt_sha256": {
+          "python_type": "str | None"
+        },
+        "prompt_version": {
+          "python_type": "str | None"
+        },
+        "provider_client_retry_configuration": {
+          "python_type": "Mapping[str, Any]"
+        },
+        "release_blocking_expectation_ids": {
+          "python_type": "tuple[str, ...]"
+        },
+        "required_lane_ids_by_expectation": {
+          "python_type": "Mapping[str, tuple[str, ...]]"
+        },
+        "retriever_configuration": {
+          "python_type": "Mapping[str, Any]"
+        },
+        "retriever_version": {
+          "python_type": "str"
+        },
+        "runtime_configuration": {
+          "python_type": "Mapping[str, Any]"
+        },
+        "runtime_sha256": {
+          "python_type": "str"
+        },
+        "runtime_version": {
+          "python_type": "str"
+        },
+        "scheduled_run_count": {
+          "python_type": "int"
+        },
+        "scheduled_run_ids": {
+          "python_type": "tuple[str, ...]"
+        },
+        "scorer_contract_sha256": {
+          "python_type": "str"
+        },
+        "stochastic_settings": {
+          "python_type": "Mapping[str, Any]"
+        },
+        "triage_sha256": {
+          "python_type": "str"
+        }
+      },
+      "required": [
+        "evaluation_plan_id",
+        "evaluator_version",
+        "population_sha256",
+        "triage_sha256",
+        "master_manifest_sha256",
+        "scorer_contract_sha256",
+        "gate_manifest_schema_version",
+        "gate_manifest_sha256",
+        "corpus_collection",
+        "corpus_version",
+        "corpus_authority",
+        "runtime_version",
+        "runtime_sha256",
+        "runtime_configuration",
+        "retriever_configuration",
+        "retriever_version",
+        "generator_provider",
+        "generator_model",
+        "prompt_version",
+        "prompt_sha256",
+        "stochastic_settings",
+        "provider_client_retry_configuration",
+        "scheduled_run_count",
+        "scheduled_run_ids",
+        "release_blocking_expectation_ids",
+        "non_blocking_expectation_ids",
+        "required_lane_ids_by_expectation",
+        "frozen_identity_label_sha256_by_unit",
+        "frozen_transition_label_sha256_by_unit",
+        "generation_dependent",
+        "plan_sha256",
+        "generated_at"
+      ],
+      "type": "object"
+    },
+    "RetrievalLaneRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "collection_identity": {
+          "python_type": "str"
+        },
+        "corpus_identity": {
+          "python_type": "str"
+        },
+        "ended_at": {
+          "python_type": "str"
+        },
+        "error_state": {
+          "python_type": "str | None"
+        },
+        "evidence_ids": {
+          "python_type": "tuple[str, ...]"
+        },
+        "evidence_ownership": {
+          "python_type": "Mapping[str, str]"
+        },
+        "invoked": {
+          "python_type": "bool"
+        },
+        "lane_id": {
+          "python_type": "str"
+        },
+        "lane_type": {
+          "python_type": "str"
+        },
+        "logical_attempt_id": {
+          "python_type": "str"
+        },
+        "query_digest": {
+          "python_type": "str"
+        },
+        "result_count": {
+          "python_type": "int"
+        },
+        "retrieval_owner": {
+          "python_type": "str"
+        },
+        "started_at": {
+          "python_type": "str"
+        },
+        "subject_identity": {
+          "python_type": "str | None"
+        },
+        "terminal_disposition": {
+          "python_type": "str"
+        },
+        "zero_result_state": {
+          "python_type": "bool"
+        }
+      },
+      "required": [
+        "logical_attempt_id",
+        "lane_id",
+        "lane_type",
+        "subject_identity",
+        "retrieval_owner",
+        "collection_identity",
+        "corpus_identity",
+        "invoked",
+        "terminal_disposition",
+        "result_count",
+        "evidence_ids",
+        "evidence_ownership",
+        "error_state",
+        "zero_result_state",
+        "query_digest",
+        "started_at",
+        "ended_at"
+      ],
+      "type": "object"
+    },
+    "ScopeOwnershipTransitionRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "active_scope_before": {
+          "python_type": "tuple[str, ...]"
+        },
+        "actual_action": {
+          "python_type": "str"
+        },
+        "actual_active_scope_after": {
+          "python_type": "tuple[str, ...]"
+        },
+        "actual_claim_owner": {
+          "python_type": "str | None"
+        },
+        "actual_evidence_owner": {
+          "python_type": "str | None"
+        },
+        "actual_lineage_state": {
+          "python_type": "str"
+        },
+        "actual_reference_type": {
+          "python_type": "str"
+        },
+        "actual_resolved_referent": {
+          "python_type": "str | None"
+        },
+        "actual_response_state": {
+          "python_type": "str"
+        },
+        "actual_transition": {
+          "python_type": "str"
+        },
+        "clarification_actual": {
+          "python_type": "bool"
+        },
+        "clarification_expected": {
+          "python_type": "bool"
+        },
+        "contamination_risk_class": {
+          "python_type": "str | None"
+        },
+        "contamination_severity": {
+          "python_type": "str | None"
+        },
+        "conversation_id": {
+          "python_type": "str"
+        },
+        "conversation_reloaded": {
+          "python_type": "bool"
+        },
+        "cross_conversation_leakage": {
+          "python_type": "bool"
+        },
+        "cross_subject_contamination": {
+          "python_type": "bool"
+        },
+        "expectation_id": {
+          "python_type": "str"
+        },
+        "expected_action": {
+          "python_type": "str"
+        },
+        "expected_active_scope_after": {
+          "python_type": "tuple[str, ...]"
+        },
+        "expected_claim_owner": {
+          "python_type": "str | None"
+        },
+        "expected_evidence_owner": {
+          "python_type": "str | None"
+        },
+        "expected_lineage_state": {
+          "python_type": "str"
+        },
+        "expected_reference_type": {
+          "python_type": "str"
+        },
+        "expected_resolved_referent": {
+          "python_type": "str | None"
+        },
+        "expected_response_state": {
+          "python_type": "str"
+        },
+        "expected_subject_identity": {
+          "python_type": "str"
+        },
+        "expected_transition": {
+          "python_type": "str"
+        },
+        "frozen_transition_sha256": {
+          "python_type": "str"
+        },
+        "isolation_conversation_ids": {
+          "python_type": "tuple[str, ...]"
+        },
+        "logical_attempt_id": {
+          "python_type": "str"
+        },
+        "persistence_created": {
+          "python_type": "bool"
+        },
+        "process_instance_after": {
+          "python_type": "str | None"
+        },
+        "process_instance_before": {
+          "python_type": "str | None"
+        },
+        "prompt_history_simulated": {
+          "python_type": "bool"
+        },
+        "requires_conversation_isolation": {
+          "python_type": "bool"
+        },
+        "requires_restart_reload": {
+          "python_type": "bool"
+        },
+        "run_id": {
+          "python_type": "str"
+        },
+        "scenario_id": {
+          "python_type": "str"
+        },
+        "subject_identity": {
+          "python_type": "str"
+        },
+        "turn_id": {
+          "python_type": "str"
+        }
+      },
+      "required": [
+        "logical_attempt_id",
+        "run_id",
+        "expectation_id",
+        "scenario_id",
+        "conversation_id",
+        "turn_id",
+        "subject_identity",
+        "expected_subject_identity",
+        "active_scope_before",
+        "expected_active_scope_after",
+        "actual_active_scope_after",
+        "expected_reference_type",
+        "actual_reference_type",
+        "expected_resolved_referent",
+        "actual_resolved_referent",
+        "expected_evidence_owner",
+        "actual_evidence_owner",
+        "expected_claim_owner",
+        "actual_claim_owner",
+        "expected_lineage_state",
+        "actual_lineage_state",
+        "expected_action",
+        "actual_action",
+        "expected_transition",
+        "actual_transition",
+        "expected_response_state",
+        "actual_response_state",
+        "clarification_expected",
+        "clarification_actual",
+        "cross_subject_contamination",
+        "contamination_severity",
+        "contamination_risk_class",
+        "requires_restart_reload",
+        "persistence_created",
+        "process_instance_before",
+        "process_instance_after",
+        "conversation_reloaded",
+        "prompt_history_simulated",
+        "requires_conversation_isolation",
+        "isolation_conversation_ids",
+        "cross_conversation_leakage",
+        "frozen_transition_sha256"
+      ],
+      "type": "object"
+    }
+  },
+  "evaluator_version": "v2-evaluator.1",
+  "schema_version": "v2-evaluator-schemas.1"
+}

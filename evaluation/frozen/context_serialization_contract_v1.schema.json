@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "irg.model_visible_context.v1",
+  "title": "IRG Context Serialization Contract V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "contract_version",
+    "block_order",
+    "required_blocks",
+    "omission_rule",
+    "conversation_authority",
+    "control_authority",
+    "source_mechanics_narration"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "irg.model_visible_context.v1"
+    },
+    "contract_version": {
+      "const": "IRG_CONTEXT_SERIALIZATION_V1"
+    },
+    "block_order": {
+      "const": [
+        "CONVERSATION_CONTINUITY",
+        "QUESTION",
+        "CONTROL",
+        "AUTHORITY_RESULTS",
+        "TECHNICAL_EVIDENCE",
+        "DYNAMIC_STATE",
+        "SOURCE_IDENTITIES"
+      ]
+    },
+    "required_blocks": {
+      "const": ["QUESTION"]
+    },
+    "omission_rule": {
+      "const": "omit_blocks_without_current_runtime_data"
+    },
+    "conversation_authority": {
+      "const": "NONE_CONTINUITY_ONLY"
+    },
+    "control_authority": {
+      "const": "NONE_INSTRUCTION_ONLY"
+    },
+    "source_mechanics_narration": {
+      "const": "PROHIBITED"
+    }
+  },
+  "additionalProperties": false
+}
