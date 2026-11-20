@@ -1,0 +1,3 @@
+# Evaluation evolution
+Historical progression: retrieval recall → exact identifier → source/page → answer fidelity → identity/document applicability → owner/configuration → structural completion → model-visible context sufficiency → response-plan correctness → final answer/citation accuracy → fresh holdout/scale/paired ablation.
+Do not compare different populations, gold units, K definitions or pipeline arms without a crosswalk. Note V2 frozen master 244 scenarios/245 units was **not** a successful qualification run as of 2026-09-02 (https://docs.google.com/document/d/1ZnHzc0VX8PDXmv9PV59yLG7PPQvjHYEM/edit).
