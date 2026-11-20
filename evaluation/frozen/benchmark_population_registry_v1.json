@@ -1,0 +1,87 @@
+{
+  "schema_version": "irg_benchmark_population_registry.v1",
+  "contract": "IRG_E2E_EVALUATION_CONTRACT_V1",
+  "population_count": 8,
+  "populations": [
+    {
+      "population_id": "A_STATIC_TECHNICAL_CORE",
+      "purpose": "Stable document-grounded retrieval, authority, factual, and citation baseline for static technical questions.",
+      "authority_types": ["MANUFACTURER_TECHNICAL", "APPROVED_IRG_MAPPING_WHEN_EXPLICIT"],
+      "frozen_or_dynamic": "FROZEN",
+      "qualification_eligible": "YES_ONLY_IF_UNTOUCHED_AND_INDEPENDENTLY_GOVERNED",
+      "reuse_policy": "After qualification access, reuse for regression only; never refresh qualification claims from a consumed partition.",
+      "gold_type": "SOURCE_FIRST_FACTS_ALLOWED_EVIDENCE_IDENTITIES_AND_APPLICABILITY",
+      "evaluator_type": "DETERMINISTIC_PLUS_INDEPENDENT_CLAIM_ADJUDICATION"
+    },
+    {
+      "population_id": "B_RESPONSE_POLICY",
+      "purpose": "Evaluate the same facts across terse, conversational, ambiguous, frustrated, follow-up, explanation, customer-ready, unknown, and handoff contexts.",
+      "authority_types": ["POLICY_BEHAVIOR", "UNDERLYING_FACT_AUTHORITY_BY_CASE"],
+      "frozen_or_dynamic": "SPLIT_DEV_VALIDATION_QUALIFICATION",
+      "qualification_eligible": "YES_ONLY_FOR_UNTOUCHED_QUALIFICATION_SPLIT",
+      "reuse_policy": "Development examples may be iterated; validation freezes prompt decisions; qualification remains untouched until one governed run.",
+      "gold_type": "FACT_GOLD_PLUS_VERSIONED_RESPONSE_POLICY_APPLICABILITY_RUBRIC",
+      "evaluator_type": "DETERMINISTIC_HYBRID_AND_HUMAN"
+    },
+    {
+      "population_id": "C_FULL_CORPUS_STRESS",
+      "purpose": "Measure retrieval and answer degradation under distractors, revisions, duplicate documents, noisy extraction, and scale.",
+      "authority_types": ["MANUFACTURER_TECHNICAL", "CORPUS_AND_REVISION_AUTHORITY"],
+      "frozen_or_dynamic": "FROZEN_PER_CORPUS_STAGE",
+      "qualification_eligible": "YES_WITH_FROZEN_CORPUS_IDENTITY_AND_UNTOUCHED_CASES",
+      "reuse_policy": "Stable subset may compare CORPUS_A/B/C; consumed qualification cases remain regression-only.",
+      "gold_type": "ALLOWED_EVIDENCE_OWNER_REVISION_AND_CONTEXT_PURITY_AUTHORITY",
+      "evaluator_type": "DETERMINISTIC_PLUS_SUBSTANTIVE_EVALUATOR"
+    },
+    {
+      "population_id": "D_DYNAMIC_AUTHORITY",
+      "purpose": "Evaluate current price, promotion, inventory, product state, shipping, order, return, and warranty/workflow facts.",
+      "authority_types": ["COMMERCE_PRICING", "INVENTORY", "PRODUCT_CATALOG", "SHIPPING_FULFILLMENT", "ORDER", "RETURNS_WARRANTY_CRM"],
+      "frozen_or_dynamic": "CONTROLLED_DYNAMIC_FIXTURE_OR_SANDBOX",
+      "qualification_eligible": "YES_ONLY_WITH_EXACT_STATE_AND_TIME_SNAPSHOT",
+      "reuse_policy": "Fixture definitions may be reused; qualification instances require frozen unexposed state assignments and exact timestamps.",
+      "gold_type": "TIME_BOUND_OPERATIONAL_STATE_AND_FAILURE_BEHAVIOR",
+      "evaluator_type": "DETERMINISTIC_ADAPTER_TELEMETRY_PLUS_POLICY_EVALUATOR"
+    },
+    {
+      "population_id": "E_MIXED_AUTHORITY",
+      "purpose": "Evaluate questions requiring two or more fact-type authority classes in one response.",
+      "authority_types": ["MULTIPLE_FACT_SPECIFIC_AUTHORITIES"],
+      "frozen_or_dynamic": "HYBRID_FROZEN_TECHNICAL_AND_CONTROLLED_DYNAMIC",
+      "qualification_eligible": "YES_WITH_PER_FACT_AUTHORITY_AND_STATE_FREEZE",
+      "reuse_policy": "Atomic fact ledgers and source snapshots must remain bound; consumed qualification cases become regression-only.",
+      "gold_type": "ATOMIC_FACT_AUTHORITY_FRESHNESS_AND_BINDING_LEDGER",
+      "evaluator_type": "DETERMINISTIC_PLUS_SUBSTANTIVE_AND_POLICY_EVALUATORS"
+    },
+    {
+      "population_id": "F_SAFETY_ADVERSARIAL",
+      "purpose": "Evaluate high-consequence ambiguity, misleading identifiers, unsafe selection, contradiction, and temptation to guess.",
+      "authority_types": ["MANUFACTURER_TECHNICAL", "SAFETY_WARNING", "FACT_SPECIFIC_OPERATIONAL_WHERE_APPLICABLE"],
+      "frozen_or_dynamic": "FROZEN_PROTECTED",
+      "qualification_eligible": "YES_ONLY_IF_UNTOUCHED_AND_SOURCE_FIRST_ADJUDICATED",
+      "reuse_policy": "After exposure, use only for regression and known-defect coverage; create fresh protected cases for qualification.",
+      "gold_type": "HAZARD_SCOPE_REQUIRED_WARNING_ALLOWED_ACTION_AND_CLARIFICATION_AUTHORITY",
+      "evaluator_type": "DETERMINISTIC_HARD_GATES_PLUS_EXPERT_HUMAN_REVIEW"
+    },
+    {
+      "population_id": "G_LIVE_SHADOW",
+      "purpose": "Observe real internal questions, failure strata, and usefulness in non-authoritative shadow mode.",
+      "authority_types": ["OBSERVED_RUNTIME_SOURCES_UNKNOWN_UNTIL_ADJUDICATED"],
+      "frozen_or_dynamic": "LIVE_DYNAMIC_SAMPLE",
+      "qualification_eligible": "NO",
+      "reuse_policy": "No automatic gold; sample under approved privacy/retention controls for separate adjudication and future benchmark design.",
+      "gold_type": "NONE_AUTOMATIC_HUMAN_ADJUDICATION_OPTIONAL",
+      "evaluator_type": "OBSERVABILITY_PLUS_HUMAN_SAMPLE_REVIEW"
+    },
+    {
+      "population_id": "H_REGRESSION_FIXTURES",
+      "purpose": "Small deterministic known-defect set for fast local and CI regression checks.",
+      "authority_types": ["DEFECT_SPECIFIC_FROZEN_FIXTURES"],
+      "frozen_or_dynamic": "FROZEN_CONSUMED",
+      "qualification_eligible": "NO",
+      "reuse_policy": "May be rerun for regression indefinitely but never used to claim generalized accuracy or fresh qualification.",
+      "gold_type": "KNOWN_DEFECT_EXPECTED_BEHAVIOR",
+      "evaluator_type": "DETERMINISTIC"
+    }
+  ]
+}
