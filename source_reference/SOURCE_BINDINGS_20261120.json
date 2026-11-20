@@ -125,5 +125,10 @@
       "verification": "SHA256_DIRECT_DRIVE_BYTES_AND_PYTHON_AST_PARSE",
       "git_commit_binding": null
     }
-  ]
+  ],
+  "p0_local_evidence_status": "EXTERNALLY_VERIFIED_NOT_LOCAL",
+  "codex_external_archive_dependency": "PROHIBITED",
+  "local_source_completion": false,
+  "provenance_ids_optional": true,
+  "publication_review_status": "REQUIRES_FINAL_REVIEW"
 }
