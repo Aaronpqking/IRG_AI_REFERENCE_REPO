@@ -119,5 +119,10 @@
     "qualification": "NOT_EXECUTED",
     "qualification_execution_authorized": false
   },
-  "open_exception": "IRG-X001_MASTER_MANIFEST_HASH_UNRESOLVED"
+  "open_exception": "IRG-X001_MASTER_MANIFEST_HASH_UNRESOLVED",
+  "p0_local_evidence_status": "EXTERNALLY_VERIFIED_NOT_LOCAL",
+  "codex_external_archive_dependency": "PROHIBITED",
+  "local_source_completion": false,
+  "provenance_ids_optional": true,
+  "publication_review_status": "REQUIRES_FINAL_REVIEW"
 }
