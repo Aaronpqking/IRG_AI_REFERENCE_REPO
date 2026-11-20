@@ -1,0 +1,127 @@
+{
+  "architecture": {
+    "aggregation": "independent per-run pass authority with supplemental non-rescuing pooled metrics",
+    "execution_records": "append-only logical, physical-call, retrieval-lane, identity, and scope/ownership ledgers",
+    "human_g06_review": "human completeness confirmation followed by blinded residual adjudication only where required",
+    "plan": "QualificationPlan immutable hash-bound schema",
+    "reporting": "release-blocking and non-blocking populations remain separate; retry rate is non-blocking",
+    "scoring": "deterministic shared primitives and seven gate scorers"
+  },
+  "authority": {
+    "gate_manifest_schema_version": "irg.v2.evaluation_gate_manifest.v1",
+    "gate_manifest_sha256": "9e14682951ddea0b6720e74eecc87c680b5ddce580d8915a3d8918e07acfece0",
+    "master_manifest_sha256": "9ddf9eaf993a62182ce1c52f550002deb2d3584f12e9a56167fba1fe78df0f3c",
+    "population_sha256": "4b561ffea79edc97c270cda38fbd0e5351615c0acd8d8be4eab291a3d504bd8e",
+    "scorer_contract_sha256": "7a376ba1ab2775431625468b6e45bc9c859aff2a01c180c80118f9845f556be0",
+    "triage_sha256": "8dc936cb0d7c600fdad13592f45f2b564ff8c0b41e9050294373f19432a25e2d"
+  },
+  "canonical_content_sha256": "e52cacee739676bfa0cbe10e90e645c7766d1b1e479c90e36d8f7ad3a0aa450c",
+  "configuration_contract_hashes": {
+    "docs/evaluation/V2_GATE_MANIFEST.json": "9e14682951ddea0b6720e74eecc87c680b5ddce580d8915a3d8918e07acfece0",
+    "docs/evaluation/V2_GATE_SCORER_CONTRACTS_v1.md": "7a376ba1ab2775431625468b6e45bc9c859aff2a01c180c80118f9845f556be0"
+  },
+  "dependency_hashes": {
+    "docs/evaluation/evaluator_v1/V2_EVALUATOR_DEPENDENCIES_v1.json": "fbc7ebe8e48cd389ae0cf883093c8de1c451d927cee10701a1e093fbe69ea6ef",
+    "requirements.txt": "f4927fc42f81d2eb2338860c3102e6821ee2d8c4705373f6b5c5d6f7a82aa19a"
+  },
+  "derived_population_manifest": {
+    "canonical_content_sha256": "36bdcc27c89cb0bcacc98668f5bef3235db05221c8b2668426b47bd676919742",
+    "file_sha256": "3ea5a4648e9a7043d3100fcf6aafb9494fb76c5146e842f6335dab50ed7ce0f0",
+    "path": "docs/evaluation/evaluator_v1/V2_DERIVED_GATE_POPULATIONS_v1.json"
+  },
+  "designated_approver": "Aaron",
+  "evaluator_approval_state": "PENDING_OWNER_APPROVAL",
+  "evaluator_version": "v2-evaluator.1",
+  "fixture_hashes": {
+    "tests/fixtures/v2_evaluator_v1/fixture_matrix.json": "de16b3530f1f14316496cc606a033aecc07dc004927d9bb838deb17736db5fdb"
+  },
+  "focused_test_evidence": {
+    "path": "docs/evaluation/evaluator_v1/V2_EVALUATOR_FOCUSED_TEST_EVIDENCE_v1.json",
+    "sha256": "70dcfee0cc60f6ec9a9b0b7f49f673304bafac13ae6d461269688d562a12b871"
+  },
+  "gate_scorer_mapping": {
+    "V2-G01": {
+      "callable": "src.v2_evaluator.scorers.score_g01",
+      "population": "execution_ledger",
+      "threshold": "100%"
+    },
+    "V2-G02": {
+      "callable": "src.v2_evaluator.scorers.score_g02",
+      "population": "82 blocking expectations per run",
+      "threshold": ">=98%"
+    },
+    "V2-G03": {
+      "callable": "src.v2_evaluator.scorers.score_g03",
+      "population": "86 blocking expectations per run",
+      "threshold": ">=90%"
+    },
+    "V2-G05": {
+      "callable": "src.v2_evaluator.scorers.score_g05",
+      "population": "15 blocking expectations per run",
+      "threshold": ">=90% plus critical contamination veto"
+    },
+    "V2-G06": {
+      "callable": "src.v2_evaluator.scorers.score_g06",
+      "population": "claims from 175 blocking parent expectations per run",
+      "threshold": "0 critical and <=1% unsupported per run"
+    },
+    "V2-G07": {
+      "callable": "src.v2_evaluator.scorers.score_g07",
+      "population": "14 blocking expectations per run",
+      "threshold": ">=90%"
+    },
+    "V2-G18": {
+      "callable": "src.v2_evaluator.scorers.score_g18",
+      "population": "attempt_ledger",
+      "threshold": "<=1% system failures per valid run"
+    }
+  },
+  "implementation_report": {
+    "path": "docs/evaluation/evaluator_v1/V2_EVALUATOR_IMPLEMENTATION_REPORT_v1.md",
+    "sha256": "a631fc4e9c0f7e9be88a4687e5233e9e2aae5d62cc282a9ee3b7fafa88797e87"
+  },
+  "multi_run_policy": {
+    "every_run_must_independently_pass": true,
+    "pooled_metrics": "SUPPLEMENTAL_REPORTING_ONLY",
+    "pooled_result_can_rescue_failed_run": false,
+    "provider_dependent_complete_runs": 3
+  },
+  "owner_approval_required_before_qualification": true,
+  "qualification_execution_authorized": false,
+  "qualification_plan_instance": "NOT_CREATED",
+  "qualification_status": "NOT_EXECUTED",
+  "retry_policy": {
+    "application_level_retries": 0,
+    "automatic_transport_retries_nested_under_logical_attempt": true,
+    "complete_invalidated_run_rerun_only": true,
+    "retry_rate_metric": "NON_BLOCKING",
+    "selective_case_retry_allowed": false
+  },
+  "schema_hashes": {
+    "docs/evaluation/evaluator_v1/V2_EVALUATOR_SCHEMAS_v1.json": "fdc579b24ef1fd9037cd73a84ec393e4b449941299af411693eca12779687ca0"
+  },
+  "schema_version": "v2-evaluator-artifact-manifest.1",
+  "serving_runtime_modified": false,
+  "source_hashes": {
+    "src/scripts/build_v2_evaluator_artifacts.py": "99fab5b9dea238942b8fc5750cf5476abdbd374489750921b9c933784a992a45",
+    "src/v2_evaluation_contract.py": "99f55898bd8ba0f1f1c4e390b090aba2c8b680d39de2ac5503d1a45646920a4e",
+    "src/v2_evaluator/__init__.py": "89d1d3b9f2a52a3f8a63af3b118585a0c7ff78694adf09c4d83d884c1557855a",
+    "src/v2_evaluator/ledger.py": "df30dc665265c6b7d3ec59d3803fd4be77d88c1c672e84e5032232ec85693ff1",
+    "src/v2_evaluator/models.py": "c176f80784a0aa749cf134b306a2efd9666d240be6ae10cc790bff2512137feb",
+    "src/v2_evaluator/population.py": "b394d1d677c1492e9534d1f15541c7d254530c3a5e90950642433b1b8c78c321",
+    "src/v2_evaluator/primitives.py": "a4f3b067a1c8ec532c20ed39e522dde5d9a30db0016a26b6013d405391c3d353",
+    "src/v2_evaluator/scorers.py": "dd9c117eba83a8843f59647a80a296e3567a3063d40d13f177524f03a8b7099e"
+  },
+  "status": "READY_FOR_EVALUATOR_APPROVAL",
+  "test_source_hashes": {
+    "tests/test_v2_evaluator.py": "de7a6ba1ea503d5d9a93e30382faf694e42e5d50135890b55bf8d16a1fb8e5a6",
+    "tests/test_v2_evaluator_artifacts.py": "d7efd2bae509bc5bcd67aa6adfe98168760910e203a114879877f3112a9c0243"
+  },
+  "versions": {
+    "blinded_adjudication_schema": "ClaimAdjudicationRecord@v2-evaluator-schemas.1",
+    "derived_population_manifest": "v2-derived-gate-populations.1",
+    "deterministic_scorer": "v2-deterministic-scorer.1",
+    "human_review_schema": "ClaimCompletenessReview@v2-evaluator-schemas.1",
+    "qualification_plan_schema": "QualificationPlan@v2-evaluator-schemas.1"
+  }
+}
