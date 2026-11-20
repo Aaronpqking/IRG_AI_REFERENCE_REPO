@@ -6,7 +6,7 @@ import unittest
 from scripts.validate_reference_seed import ROOT
 
 
-class DriveSourceBindingTests(unittest.TestCase):
+class ArchiveSourceBindingTests(unittest.TestCase):
     def test_selected_files_are_real_hash_references_not_promoted_git_commits(self):
         path = ROOT / "source_reference" / "SOURCE_BINDINGS_20261120.json"
         payload = json.loads(path.read_text(encoding="utf-8"))
@@ -15,14 +15,14 @@ class DriveSourceBindingTests(unittest.TestCase):
         self.assertEqual(payload["p0_local_evidence_status"], "EXTERNALLY_VERIFIED_NOT_LOCAL")
         self.assertFalse(payload["local_source_completion"])
         self.assertEqual(payload["codex_external_archive_dependency"], "PROHIBITED")
-        paths, ids = set(), set()
+        paths = set()
         for record in payload["records"]:
             with self.subTest(record=record["path"]):
                 self.assertNotIn(record["path"], paths)
-                self.assertNotIn(record["drive_file_id"], ids)
+                self.assertNotIn("drive_file_id", record)
                 paths.add(record["path"])
-                ids.add(record["drive_file_id"])
                 self.assertRegex(record["sha256"], r"^[0-9a-f]{64}$")
+                self.assertNotIn("source_id", record)
                 self.assertGreater(record["bytes"], 0)
                 self.assertIsNone(record["git_commit_binding"])
                 self.assertEqual(record["sensitive_class"], "INTERNAL_IMPLEMENTATION")
