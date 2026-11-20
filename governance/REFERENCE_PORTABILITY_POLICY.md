@@ -1,10 +1,10 @@
-# P0 reference portability and Google Drive boundary
+# P0 reference portability and private historical archive boundary
 
 **Status:** `ACTIVE_REFERENCE_SEED_POLICY` (2026-11-20). This document interprets repository-local `REFERENCE_POLICY.md`, `SOURCE_MANIFEST.md`, `governance/AUTONOMY_BOUNDARIES.md`, and `SEED_COMPLETENESS_AUDIT_20261120.md`. It does not retroactively amend any historical freeze or grant release authority.
 
 ## Permitted external discovery
-- Google Drive and other authorized archives may be searched to **locate, read, authenticate, hash, and classify** historical source, tests, frozen artifacts, and reports.
-- Origin IDs may be retained **only as optional provenance metadata** in explicitly labeled ledgers; Codex must never require access to Google Drive, Docs, a private account, or an external URL to understand a current/reference claim.
+- private historical archive and other authorized archives may be searched to **locate, read, authenticate, hash, and classify** historical source, tests, frozen artifacts, and reports.
+- Origin IDs may be retained **only as optional provenance metadata** in explicitly labeled ledgers; Codex must never require access to private historical archive, Docs, a private account, or an external URL to understand a current/reference claim.
 - A hash verified against private bytes is an **externally verified identity**, not a repository-local executable source. Label private/withheld files distinctly and never claim a pointer or hash constitutes a completed source transfer.
 
 ## Required local transfer and documentation
