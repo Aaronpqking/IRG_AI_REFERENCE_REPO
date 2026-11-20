@@ -6,6 +6,7 @@ import json
 import subprocess
 import sys
 from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from scripts.validate_reference_seed import ROOT, REQUIRED_POPULATED_DIRS, substantive_files, validate
 
 def audit(root: Path=ROOT)->dict:
