@@ -1,9 +1,20 @@
 # Evaluation integrity
-- Predeclare population, applicability, denominator, exclusion rules and exact gold before qualifying.
-- Hash and freeze original question text, corpus, evidence, prompts, evaluator, runtime/config and scoring rules. Source text may be kept private; public ledger retains non-sensitive hashes.
-- Do not tune on fresh holdout; create a new separate holdout after exposure.
-- Post-execution gold rewriting prohibited; invalid run remains invalid; no post hoc denominator shrinkage.
-- Case-level exceptions are documented; system failure counts against a valid run's gate; invalidation is not silently excluded.
-- Always distinguish retrieval, sufficient evidence@K, context sufficiency, realization and citations.
-- Partial execution is diagnostic, not qualification; skipped and blocked cases remain visible.
-- 2026-09-02 V2 master population freeze was not a completed qualification: https://docs.google.com/document/d/1ZnHzc0VX8PDXmv9PV59yLG7PPQvjHYEM/edit.
+
+- Predeclare population, applicability, denominator, exclusion rules and exact gold before qualification.
+- Freeze and identify question text, corpus, evidence, prompts, evaluator, runtime/config and scoring rules.
+- Do not tune on a fresh holdout after exposure; create a new independent holdout.
+- Post-execution gold rewriting is prohibited.
+- Invalid runs remain invalid; partial execution is diagnostic, not qualification.
+- Do not silently shrink denominators after seeing outcomes.
+- Case-level exceptions, skipped cases, blocked cases and infrastructure failures remain visible.
+- Distinguish candidate retrieval, evidence sufficiency, model-visible context sufficiency, realization and citation support.
+- Provider/system failure and evidence insufficiency require distinct failure classes.
+- Public provenance may retain hashes for withheld sensitive material, but withheld material cannot be treated as locally reproducible evidence.
+
+Repository-local frozen authority:
+- [../evaluation/frozen/V2_GATE_MANIFEST.json](../evaluation/frozen/V2_GATE_MANIFEST.json)
+- [../evaluation/frozen/V2_GATE_SCORER_CONTRACTS_v1.md](../evaluation/frozen/V2_GATE_SCORER_CONTRACTS_v1.md)
+- [../evaluation/frozen/V2_MASTER_REGRESSION_MANIFEST_v1.json](../evaluation/frozen/V2_MASTER_REGRESSION_MANIFEST_v1.json)
+- [../evaluation/historical/V2_EVALUATION_AUTHORITY.md](../evaluation/historical/V2_EVALUATION_AUTHORITY.md)
+
+The captured V2 state did not establish completed release qualification. See [../evaluation/INTEGRITY_FINDINGS_20261120.md](../evaluation/INTEGRITY_FINDINGS_20261120.md).
