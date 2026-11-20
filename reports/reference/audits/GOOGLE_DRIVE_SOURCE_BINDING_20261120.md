@@ -17,7 +17,7 @@ Eleven selected source/test files were read directly from Drive (**421,897 bytes
 | `src/v2_evaluator/scorers.py` | G01/G02/G03/G05/G06/G07/G18 scorers and `aggregate_gate_runs` | Implementation definitions exist; separately preserved owner approval verifies frozen evaluator implementation; release qualification remains unexecuted |
 | Four selected `tests/` files | 10+27+28+65 = **130** test functions | Tests are readable/AST-valid, **not executed** as a historical suite |
 
-File line ranges refer exclusively to this exact selected Drive source snapshot; they are not guaranteed to correspond to October Git revisions. The 130 count is syntactic functions named `test_*`, **not a test pass count**.
+File line ranges refer exclusively to this exact selected historical archive source snapshot; they are not guaranteed to correspond to October Git revisions. The 130 count is syntactic functions named `test_*`, **not a test pass count**.
 
 ## Source status upgraded
 Previous state `SOURCE_UNAVAILABLE` was overly broad. Correct status is:
