@@ -1,14 +1,19 @@
-# Experiment register — initial history-backed entries (not substitute for run ledgers)
-| Experiment | Date | Hypothesis | Population | Changed variable | Baseline | Result | Status | Promoted? | Evidence |
-|---|---|---|---|---|---|---|---|---|---|
-| Early V1.5 frozen config | 2026-07-31 | stable bounded hybrid | 132 PDF / 4,173 chunks | release freeze | prior dev | config documented; no new final QA estimate | PROVEN_WITH_GAP | historical only | https://docs.google.com/document/d/1clikto0CgPvarBSqY6XWgCEkf74qNsS8/edit |
-| V2 master population freeze | 2026-09-02 | binding expected behavior | 244 scenarios/245 units | population/gates | prior triage | frozen population; qualification NOT_EXECUTED | BLOCKED | no | https://docs.google.com/document/d/1ZnHzc0VX8PDXmv9PV59yLG7PPQvjHYEM/edit |
-| P1/P2 reconstruction | 2026-10 (history) | structurally recover exact gold | bounded P1/P2 | parent selection | earlier pipeline | reported 100% exact gold@10; no answerability inference | PROVEN_WITH_GAP | no | late project history, run IDs pending |
-| Expansion scale trial | 2026-10-30 (history) | remain robust at scale | 40 selected gold, 10 narrative | expanded corpus | historical October arm | 16/40 vs 13/40; narrative 3/10 vs 0/10 | PARTIAL_GAIN | no | late project history, ledgers pending |
-| Standard vs contextualized full-view P2 | 2026-10-27 onward (history) | full-view enhances unseen outcomes | 17 valid unseen; 20 planned,19 run | +10,868 contextualized views | Standard | context sufficient 3/17 both; evidence@10 5/17 both; wins 0 losses 0 | NO_GAIN | no | paired history, original run pending |
-| Codebase/architecture audit | 2026-10 (history) | serving boundaries comply | bound source per audit | source closure | previous serving | reported prohibited modules 23→0, 36 scoped tests passing; not E2E run | PROVEN_WITH_GAP | no | project history, source pending |
+# Experiment register — repository-local evidence map
 
-| V1.9.33 observe-only paired ablation | 2026-09-24 | control-layer comparison | 110 planned; 20 before parity stop | observed control path | frozen V1.9.32 record | retrieval parity failed at case 21, no qualifying aggregate | INVALID | no | [original invalid report](../reports/reference/ablations/V1_9_33_INVALID_ABLATION_REPORT.md) |
-| V1.9.35 single-retrieval forked paths | 2026-09-24 | effect of answer suppression/control | 110 development cases | forked response decision path after identical retrieval | Path A versus Path B | A 82/110 correct, B 10/110; B prevented 20 unsupported cases but suppressed 82 correct | PROVEN_WITH_GAP | no | [original research report](../reports/reference/ablations/V1_9_35_SINGLE_RETRIEVAL_FORKED_PATH_ABLATION_REPORT.md) |
+This register is not a substitute for original run ledgers. Every row states whether supporting evidence is local and whether the result is qualified.
 
-Statuses: PROVEN, PROVEN_WITH_GAP, PARTIAL_GAIN, NO_GAIN, REGRESSION, INVALID, BLOCKED, SUPERSEDED. The historical current/October scale arms are not interchangeable release populations. Never infer confidence intervals from incomparable runs.
+| Experiment | Date | Population | Changed variable | Result | Status | Promoted? | Repository-local evidence |
+|---|---|---|---|---|---|---|---|
+| V1.5 frozen configuration | 2026-07-31 | 132 PDFs / 4,173 chunks | release freeze | configuration documented; no new final quality estimate | PROVEN_WITH_GAP | historical only | [V1.5 freeze](../timeline/evidence/V1_5_FROZEN_CONFIGURATION_AND_ARTIFACTS_20260731.md) |
+| V2 master population freeze | 2026-09-02 | 244 scenarios / 245 expectation units | population + gates | frozen design; qualification not executed | BLOCKED | no | [historical report](historical/V2_MASTER_REGRESSION_REPORT_v1.md), [manifest](frozen/V2_MASTER_REGRESSION_MANIFEST_v1.json) |
+| V1.9.33 observe-only paired ablation | 2026-09-24 | 110 planned; 20 completed before parity stop | control-layer comparison | retrieval parity failed at case 21; no qualifying aggregate | INVALID | no | [local report](../reports/reference/ablations/V1_9_33_INVALID_ABLATION_REPORT.md) |
+| V1.9.35 single-retrieval forked paths | 2026-09-24 | 110 development cases | response-decision path after identical retrieval | A 82/110 correct; B 10/110; B prevented 20 unsupported cases but suppressed 82 correct | PROVEN_WITH_GAP | no | [local report](../reports/reference/ablations/V1_9_35_SINGLE_RETRIEVAL_FORKED_PATH_ABLATION_REPORT.md) |
+| P1/P2 reconstruction | 2026-10 | bounded P1/P2 | structural recovery | history reports exact-gold Recall@10 100%; no answerability inference | HISTORY_REPORTED_UNVERIFIED | no | original run package not yet local |
+| Expansion scale trial | 2026-10-30 | 40 selected gold + 10 narrative | expanded corpus | 16/40 vs 13/40; narrative 3/10 vs 0/10 | HISTORY_REPORTED_UNVERIFIED | no | [scale synthesis](../reports/reference/scale/EXPANDED_CORPUS_SCALE_TEST.md); original ledger pending |
+| Standard vs contextualized full-view P2 | 2026-10-27 onward | 17 valid unseen; 20 planned, 19 executed | +10,868 contextualized views | 3/17 context both; 5/17 evidence@10 both; 0 wins / 0 losses | HISTORY_REPORTED_UNVERIFIED / NO_GAIN_REPORTED | no | [ablation synthesis](../reports/reference/ablations/STANDARD_VS_FULL_VIEW_P2_ABLATION.md); original ledger pending |
+| Codebase/architecture audit | 2026-10 | bound source per historical audit | serving closure / boundaries | reported prohibited modules 23→0 and 36 scoped tests passing | HISTORY_REPORTED_UNVERIFIED | no | bound source/audit package not yet local |
+
+Statuses: PROVEN, PROVEN_WITH_GAP, PARTIAL_GAIN, NO_GAIN, REGRESSION, INVALID, BLOCKED, SUPERSEDED, HISTORY_REPORTED_UNVERIFIED.
+
+## Rule
+A history-only row cannot become clean-build promotion evidence until its original source/run package is repository-local or otherwise bound by a reproducible immutable identifier and accessible to the implementing agent.
