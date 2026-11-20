@@ -1,0 +1,453 @@
+{
+  "schema_version": "irg.v2.evaluation_gate_manifest.v1",
+  "manifest_status": "BLOCKED_PENDING_IMPLEMENTATION",
+  "authority_classification": "SCORER_CONTRACT_AUTHORITATIVE_EVALUATOR_PENDING",
+  "created_at": "2026-09-01",
+  "branch_inspected": "release/v2.0-baseline",
+  "head_inspected": "40e02daadbbfc3fcd61d2f07cb3acd799b2cfc90",
+  "production_corpus": {
+    "collection": "CORPUS_v3_RFFM_2026-08-05",
+    "point_count": 28139,
+    "verification_source": "reports/V2_0_DATASET_AUTHORITY_REQUIRED_20260826.md",
+    "verified_live_in_this_task": false
+  },
+  "shadow_corpus": {
+    "point_count": 49490,
+    "status": "QUARANTINED_UNALIASED_NOT_PROMOTED",
+    "eligible_as_v2_production_authority": false
+  },
+  "approval": {
+    "approved_by": "Aaron",
+    "approved_at": "2026-09-02",
+    "evidence": "docs/evaluation/V2_GATE_SCORER_CONTRACTS_v1.md"
+  },
+  "scorer_contract_authority": {
+    "status": "AUTHORITATIVE_FROZEN",
+    "scorer_contract_version": "v1",
+    "path": "docs/evaluation/V2_GATE_SCORER_CONTRACTS_v1.md",
+    "pre_approval_candidate_sha256": "e01bd5ea5673200c03c1aa2a87ce902b92221dd592a850184823c7e29dd5bc70",
+    "scorer_contract_sha256": "7a376ba1ab2775431625468b6e45bc9c859aff2a01c180c80118f9845f556be0",
+    "approved_by": "Aaron",
+    "approved_at": "2026-09-02",
+    "decisions": {
+      "D1": "APPROVED",
+      "D2": "APPROVED_WITH_CLARIFICATION",
+      "D3": "APPROVED",
+      "D4": "APPROVED_WITH_COMPLETENESS_CONTROL",
+      "D5": "APPROVED",
+      "D6": "APPROVED_AS_AMENDED",
+      "D7": "APPROVED"
+    },
+    "evaluator_implementation_status": "BLOCKED_PENDING_IMPLEMENTATION",
+    "qualification_status": "NOT_EXECUTED"
+  },
+  "master_population_authority": {
+    "status": "AUTHORITATIVE_FROZEN",
+    "artifact_version": "v1",
+    "approved_by": "Aaron",
+    "approved_at": "2026-09-02",
+    "population": "docs/evaluation/V2_MASTER_REGRESSION_POPULATION_v1.jsonl",
+    "population_sha256": "4b561ffea79edc97c270cda38fbd0e5351615c0acd8d8be4eab291a3d504bd8e",
+    "triage": "docs/evaluation/V2_HISTORICAL_QUESTION_TRIAGE_v1.jsonl",
+    "triage_sha256": "8dc936cb0d7c600fdad13592f45f2b564ff8c0b41e9050294373f19432a25e2d",
+    "gate_scorer_approval_included": true,
+    "qualification_included": false
+  },
+  "gates": [
+    {
+      "gate_id": "V2-G01",
+      "objective": "Account for every configured and available retrieval lane on every evaluated turn.",
+      "evaluation_unit": "qualification-eligible retrieval-bearing logical attempt",
+      "population_source": "execution_ledger",
+      "applicability_rule": "qualification_eligible == true and retrieval_invoked == true",
+      "denominator_rule": "all eligible retrieval-bearing logical attempts",
+      "scenario_applicable_gates_authoritative": false,
+      "dataset": null,
+      "dataset_version": null,
+      "dataset_sha256": null,
+      "corpus_version": null,
+      "label_schema": null,
+      "scoring_contract_version": "v1",
+      "evaluator_version": null,
+      "approval_owner": "Aaron",
+      "total_items": null,
+      "eligible_items": null,
+      "denominator": null,
+      "dataset_authority": "PENDING_LEDGER_DERIVATION",
+      "label_authority": null,
+      "candidate_sources": [
+        "future approved union of V2-G02, V2-G03, V2-G05, V2-G06, and V2-G07 scheduled turns"
+      ],
+      "scoring_contract": "docs/evaluation/V2_GATE_SCORER_CONTRACTS_v1.md#v2-g01--retrieval-lane-accounting",
+      "evaluator": null,
+      "reusable_components": [
+        "src/multi_source_retrieval.py"
+      ],
+      "numerator_proposal": "eligible turns with exactly one ATTEMPTED or EXPLICITLY_UNAVAILABLE terminal record for every required lane",
+      "denominator_proposal": "all qualification-eligible retrieval-bearing logical attempts in the frozen execution ledger",
+      "exclusions_proposal": "only lanes absent from frozen configuration and pre-approved intentional external unavailability",
+      "pass_threshold": "100%",
+      "threshold_status": "AUTHORITATIVE_RETAINED",
+      "scorer_contract_approval_status": "AUTHORITATIVE_FROZEN",
+      "evaluator_implementation_status": "BLOCKED_PENDING_IMPLEMENTATION",
+      "approval_status": "BLOCKED_PENDING_IMPLEMENTATION",
+      "approved_by": "Aaron",
+      "approved_at": "2026-09-02",
+      "blockers": [
+        "immutable qualification plan not implemented",
+        "canonical execution and retrieval-lane ledgers not implemented",
+        "required-lane manifest and terminal-state validator not frozen",
+        "evaluator implementation, fixtures, hash, and owner approval pending"
+      ]
+    },
+    {
+      "gate_id": "V2-G02",
+      "objective": "Resolve exact identifiers to the authoritative product identity.",
+      "evaluation_unit": "exact-identifier question/turn",
+      "dataset": "docs/evaluation/V2_MASTER_REGRESSION_POPULATION_v1.jsonl",
+      "dataset_version": "v1",
+      "dataset_sha256": "4b561ffea79edc97c270cda38fbd0e5351615c0acd8d8be4eab291a3d504bd8e",
+      "corpus_version": null,
+      "label_schema": "v2_master_regression_population.v2",
+      "scoring_contract_version": "v1",
+      "evaluator_version": null,
+      "approval_owner": "Aaron",
+      "total_items": 82,
+      "eligible_items": 82,
+      "denominator": "82 release-blocking expectations per complete run",
+      "dataset_authority": "AUTHORITATIVE_FROZEN",
+      "label_authority": "AUTHORITATIVE_FROZEN",
+      "candidate_sources": [
+        {
+          "path": "data/evals/v1_5_controlled_discovery.jsonl",
+          "selection": "CD-001..CD-020",
+          "sha256": "562fd04f49d811bca773ab6714ba6c5c34f093b79f4d6a7426b71cf2ac19c221"
+        },
+        {
+          "path": "data/golden_questions.jsonl",
+          "selection": "GQ-001..GQ-006,GQ-021..GQ-024",
+          "sha256": "763c3ec1e5dcfc0fe55d092d58debac9df9a139ea8f0821873303ac8a94cb7be"
+        }
+      ],
+      "scoring_contract": "docs/evaluation/V2_GATE_SCORER_CONTRACTS_v1.md#v2-g02--exact-identity-and-identifier-performance",
+      "evaluator": null,
+      "reusable_components": [
+        "src/scripts/run_unified_answering_eval.py",
+        "src/scripts/run_technical_answer_validation.py"
+      ],
+      "numerator_proposal": "release-blocking expectations whose actual resolution state and final canonical resolved/admitted identity set exactly match the frozen label",
+      "denominator_proposal": "all 82 pre-frozen release-blocking G02 expectations in each complete run",
+      "exclusions_proposal": "pre-freeze invalid identifier, absent authoritative read-model truth, semantic duplicate, or out-of-scope product",
+      "pass_threshold": ">=98%",
+      "threshold_status": "AUTHORITATIVE_RETAINED",
+      "scorer_contract_approval_status": "AUTHORITATIVE_FROZEN",
+      "evaluator_implementation_status": "BLOCKED_PENDING_IMPLEMENTATION",
+      "approval_status": "BLOCKED_PENDING_IMPLEMENTATION",
+      "approved_by": "Aaron",
+      "approved_at": "2026-09-02",
+      "blockers": [
+        "identity-resolution result schema not implemented",
+        "final canonical identity-set scorer and fixtures not frozen",
+        "evaluator implementation, hash, and owner approval pending"
+      ]
+    },
+    {
+      "gate_id": "V2-G03",
+      "objective": "Resolve natural staff product requests to the correct product, candidate set, or clarification state.",
+      "evaluation_unit": "natural-staff question/turn",
+      "dataset": "docs/evaluation/V2_MASTER_REGRESSION_POPULATION_v1.jsonl",
+      "dataset_version": "v1",
+      "dataset_sha256": "4b561ffea79edc97c270cda38fbd0e5351615c0acd8d8be4eab291a3d504bd8e",
+      "corpus_version": null,
+      "label_schema": "v2_master_regression_population.v2",
+      "scoring_contract_version": "v1",
+      "evaluator_version": null,
+      "approval_owner": "Aaron",
+      "total_items": 89,
+      "eligible_items": 86,
+      "denominator": "86 release-blocking expectations per complete run; 3 non-blocking observations reported separately",
+      "dataset_authority": "AUTHORITATIVE_FROZEN",
+      "label_authority": "AUTHORITATIVE_FROZEN",
+      "candidate_sources": [
+        {
+          "path": "data/evals/v1_5_controlled_discovery.jsonl",
+          "selection": "CD-021..CD-035",
+          "sha256": "562fd04f49d811bca773ab6714ba6c5c34f093b79f4d6a7426b71cf2ac19c221"
+        },
+        {
+          "path": "data/golden_questions.jsonl",
+          "selection": "GQ-021..GQ-028",
+          "sha256": "763c3ec1e5dcfc0fe55d092d58debac9df9a139ea8f0821873303ac8a94cb7be"
+        }
+      ],
+      "scoring_contract": "docs/evaluation/V2_GATE_SCORER_CONTRACTS_v1.md#v2-g03--natural-staff-query-performance",
+      "evaluator": null,
+      "reusable_components": [
+        "src/scripts/run_unified_answering_eval.py"
+      ],
+      "numerator_proposal": "release-blocking expectations matching the frozen resolution state, final canonical resolved/admitted identity set, and clarification behavior",
+      "denominator_proposal": "all 86 pre-frozen release-blocking G03 expectations in each complete run",
+      "exclusions_proposal": "pre-freeze duplicate, invalid/out-of-scope request, or absent authoritative label",
+      "pass_threshold": ">=90%",
+      "threshold_status": "AUTHORITATIVE_RETAINED",
+      "scorer_contract_approval_status": "AUTHORITATIVE_FROZEN",
+      "evaluator_implementation_status": "BLOCKED_PENDING_IMPLEMENTATION",
+      "approval_status": "BLOCKED_PENDING_IMPLEMENTATION",
+      "approved_by": "Aaron",
+      "approved_at": "2026-09-02",
+      "blockers": [
+        "identity-resolution and clarification result schemas not implemented",
+        "final canonical identity-set scorer and fixtures not frozen",
+        "evaluator implementation, hash, and owner approval pending"
+      ]
+    },
+    {
+      "gate_id": "V2-G05",
+      "objective": "Provide applicable owned evidence for every resolvable requested subject in multi-subject turns.",
+      "evaluation_unit": "multi-subject turn",
+      "dataset": "docs/evaluation/V2_MASTER_REGRESSION_POPULATION_v1.jsonl",
+      "dataset_version": "v1",
+      "dataset_sha256": "4b561ffea79edc97c270cda38fbd0e5351615c0acd8d8be4eab291a3d504bd8e",
+      "corpus_version": null,
+      "label_schema": "v2_master_regression_population.v2",
+      "scoring_contract_version": "v1",
+      "evaluator_version": null,
+      "approval_owner": "Aaron",
+      "total_items": 25,
+      "eligible_items": 15,
+      "denominator": "15 release-blocking expectations per complete run; 10 non-blocking observations reported separately",
+      "dataset_authority": "AUTHORITATIVE_FROZEN",
+      "label_authority": "AUTHORITATIVE_FROZEN",
+      "candidate_sources": [
+        {
+          "path": ".tmp/v2-s3-validation-experiment-20260807/stratified-30-selection.json",
+          "selection": "5 two-product and 3 three-product fixtures",
+          "sha256": "640e5a9860a0d6c9cbaa4614c509782e33304350c059f422b616ee253ceac056"
+        },
+        {
+          "path": "reports/V2_S2D_RETRIEVAL_RESULTS.jsonl",
+          "selection": "4 rows tagged multi_product before review and deduplication",
+          "sha256": "d740db2c8c41b6a0a0f50531d22c6b304832a39ee6226cb07692674b1b5087c4"
+        }
+      ],
+      "scoring_contract": "docs/evaluation/V2_GATE_SCORER_CONTRACTS_v1.md#v2-g05--multi-product-ownership-and-scope",
+      "evaluator": null,
+      "reusable_components": [
+        "src/multi_source_retrieval.py",
+        "tests/test_requested_product_ownership.py",
+        "tests/integration/test_v2_s3_multi_product_live.py"
+      ],
+      "numerator_proposal": "release-blocking expectations where every frozen subject, scope, evidence, and claim-owner predicate passes and no critical safety/fitment cross-subject veto occurs",
+      "denominator_proposal": "all 15 pre-frozen release-blocking G05 expectations in each complete run",
+      "exclusions_proposal": "pre-freeze semantic duplicate, fewer than two subjects, no authoritative subject truth; zero-resolvable turns excluded from G05 only",
+      "pass_threshold": ">=90%",
+      "threshold_status": "AUTHORITATIVE_RETAINED",
+      "scorer_contract_approval_status": "AUTHORITATIVE_FROZEN",
+      "evaluator_implementation_status": "BLOCKED_PENDING_IMPLEMENTATION",
+      "approval_status": "BLOCKED_PENDING_IMPLEMENTATION",
+      "approved_by": "Aaron",
+      "approved_at": "2026-09-02",
+      "blockers": [
+        "scope/ownership transition ledger not implemented",
+        "all-predicate scorer and critical contamination veto fixtures not frozen",
+        "evaluator implementation, hash, and owner approval pending"
+      ]
+    },
+    {
+      "gate_id": "V2-G06",
+      "objective": "Prevent cross-subject factual attribution defects.",
+      "evaluation_unit": "human-reviewed atomic factual claim",
+      "dataset": "docs/evaluation/V2_MASTER_REGRESSION_POPULATION_v1.jsonl",
+      "dataset_version": "v1",
+      "dataset_sha256": "4b561ffea79edc97c270cda38fbd0e5351615c0acd8d8be4eab291a3d504bd8e",
+      "corpus_version": null,
+      "label_schema": "v2_master_regression_population.v2",
+      "scoring_contract_version": "v1",
+      "evaluator_version": null,
+      "approval_owner": "Aaron",
+      "total_items": 221,
+      "eligible_items": 175,
+      "denominator": "all human-completeness-confirmed atomic substantive factual claims generated from 175 release-blocking expectations in each complete run; 46 non-blocking observations separate",
+      "dataset_authority": "AUTHORITATIVE_FROZEN",
+      "label_authority": "AUTHORITATIVE_FROZEN",
+      "candidate_sources": [
+        {
+          "path": ".tmp/v2-s3-validation-experiment-20260807/stratified-30-results.json",
+          "selection": "24 answers for the 8 two-/three-product cases",
+          "sha256": "9d9f6859a44320f537bfa20b684264acb137334201fabda9772e405292550800"
+        },
+        {
+          "path": ".tmp/v2-s3-validation-experiment-20260807/stratified-30-reviewed-adjudication.json",
+          "selection": "answer-level reviewed adjudication source material",
+          "sha256": "9e61a0c9c49a5914cdc66c59f2115e97a7972ea2089f1deaf0947b48b297f088"
+        }
+      ],
+      "scoring_contract": "docs/evaluation/V2_GATE_SCORER_CONTRACTS_v1.md#v2-g06--unsupported-claim-control",
+      "evaluator": null,
+      "reusable_components": [
+        "src/citation_validation.py",
+        "tests/test_citation_validation.py"
+      ],
+      "numerator_proposal": "unsupported atomic substantive factual claims, with critical unsupported claims tracked as a zero-tolerance veto",
+      "denominator_proposal": "all atomic substantive factual claims after a human reviewer confirms the claim inventory is complete for every reviewed response",
+      "exclusions_proposal": "predeclared non-factual text, verbatim user question, and formatting only",
+      "pass_threshold": "each complete run: 0 critical unsupported claims and <=1% unsupported substantive claims; pooled reporting cannot rescue",
+      "threshold_status": "AUTHORITATIVE_RETAINED",
+      "scorer_contract_approval_status": "AUTHORITATIVE_FROZEN",
+      "evaluator_implementation_status": "BLOCKED_PENDING_IMPLEMENTATION",
+      "approval_status": "BLOCKED_PENDING_IMPLEMENTATION",
+      "approved_by": "Aaron",
+      "approved_at": "2026-09-02",
+      "blockers": [
+        "claim ledger and atomic decomposition implementation pending",
+        "human claim-inventory completeness and blinded residual adjudication schemas pending",
+        "known-pass, known-fail, and omission-detection fixtures not frozen",
+        "evaluator implementation, hash, and owner approval pending"
+      ]
+    },
+    {
+      "gate_id": "V2-G07",
+      "objective": "Resolve labeled follow-up references to the correct prior product and state.",
+      "evaluation_unit": "scored follow-up user turn in a persisted transcript",
+      "dataset": "docs/evaluation/V2_MASTER_REGRESSION_POPULATION_v1.jsonl",
+      "dataset_version": "v1",
+      "dataset_sha256": "4b561ffea79edc97c270cda38fbd0e5351615c0acd8d8be4eab291a3d504bd8e",
+      "corpus_version": null,
+      "label_schema": "v2_master_regression_population.v2",
+      "scoring_contract_version": "v1",
+      "evaluator_version": null,
+      "approval_owner": "Aaron",
+      "total_items": 20,
+      "eligible_items": 14,
+      "denominator": "14 release-blocking expectations per complete run; 6 non-blocking observations reported separately",
+      "dataset_authority": "AUTHORITATIVE_FROZEN",
+      "label_authority": "AUTHORITATIVE_FROZEN",
+      "candidate_sources": [
+        {
+          "path": ".tmp/v2-s3-validation-experiment-20260807/stratified-30-selection.json",
+          "selection": "4 follow-up/reuse prompt fixtures",
+          "sha256": "640e5a9860a0d6c9cbaa4614c509782e33304350c059f422b616ee253ceac056"
+        },
+        {
+          "path": "reports/V2_S2D_RETRIEVAL_RESULTS.jsonl",
+          "selection": "S2D-TE-005 follow_up_context concept",
+          "sha256": "d740db2c8c41b6a0a0f50531d22c6b304832a39ee6226cb07692674b1b5087c4"
+        },
+        {
+          "path": "tests/integration/test_v2_s3_multi_product_live.py",
+          "selection": "Stage 3-6 restart, pronoun, ordinal, and expansion transitions"
+        }
+      ],
+      "scoring_contract": "docs/evaluation/V2_GATE_SCORER_CONTRACTS_v1.md#v2-g07--follow-up-and-continuity",
+      "evaluator": null,
+      "reusable_components": [
+        "tests/integration/test_v2_s3_multi_product_live.py",
+        "src/scripts/v2_s3_lifecycle_gate.py"
+      ],
+      "numerator_proposal": "release-blocking expectations where every applicable frozen identity, reference, scope, evidence-lineage/ownership, and response predicate passes",
+      "denominator_proposal": "all 14 pre-frozen release-blocking G07 expectations in each complete run",
+      "exclusions_proposal": "pre-freeze non-reference turn, invalid prior state, duplicate transition, or missing authoritative label",
+      "pass_threshold": ">=90%",
+      "threshold_status": "AUTHORITATIVE_RETAINED",
+      "scorer_contract_approval_status": "AUTHORITATIVE_FROZEN",
+      "evaluator_implementation_status": "BLOCKED_PENDING_IMPLEMENTATION",
+      "approval_status": "BLOCKED_PENDING_IMPLEMENTATION",
+      "approved_by": "Aaron",
+      "approved_at": "2026-09-02",
+      "blockers": [
+        "scope/ownership transition ledger and continuity scorer not implemented",
+        "real restart/reload and two-conversation isolation harnesses not frozen",
+        "evaluator implementation, hash, and owner approval pending"
+      ]
+    },
+    {
+      "gate_id": "V2-G18",
+      "objective": "Keep release-evaluation runtime failures at or below the retained limit without denominator dilution.",
+      "evaluation_unit": "qualification-eligible logical attempt",
+      "population_source": "attempt_ledger",
+      "applicability_rule": "qualification_eligible == true",
+      "denominator_rule": "all eligible qualification logical attempts",
+      "system_failure_treatment": "COUNTS_AS_FAILURE",
+      "run_invalidation_treatment": "INVALIDATE_FULL_RUN",
+      "run_invalidation_is_exclusion": false,
+      "individual_retry_can_erase_failure": false,
+      "scenario_applicable_gates_authoritative": false,
+      "dataset": null,
+      "dataset_version": null,
+      "dataset_sha256": null,
+      "corpus_version": null,
+      "label_schema": null,
+      "scoring_contract_version": "v1",
+      "evaluator_version": null,
+      "approval_owner": "Aaron",
+      "total_items": null,
+      "eligible_items": null,
+      "denominator": null,
+      "dataset_authority": "PENDING_LEDGER_DERIVATION",
+      "label_authority": null,
+      "candidate_sources": [
+        "future approved V2.0 scheduled qualification ledger"
+      ],
+      "scoring_contract": "docs/evaluation/V2_GATE_SCORER_CONTRACTS_v1.md#v2-g18--runtime-failure-rate",
+      "evaluator": null,
+      "reusable_components": [
+        "src/full_suite_evaluation.py",
+        "src/scripts/run_unified_answering_eval.py"
+      ],
+      "numerator_proposal": "logical scheduled units without a valid result because of application-origin runtime failure",
+      "denominator_proposal": "all qualification-eligible logical attempts in the frozen attempt ledger",
+      "exclusions_proposal": "only external service unavailability declared before execution with service owner and evidence",
+      "pass_threshold": "<=1%",
+      "threshold_status": "AUTHORITATIVE_RETAINED",
+      "scorer_contract_approval_status": "AUTHORITATIVE_FROZEN",
+      "evaluator_implementation_status": "BLOCKED_PENDING_IMPLEMENTATION",
+      "approval_status": "BLOCKED_PENDING_IMPLEMENTATION",
+      "approved_by": "Aaron",
+      "approved_at": "2026-09-02",
+      "blockers": [
+        "immutable qualification plan and logical-attempt ledger not implemented",
+        "physical provider-call/retry sub-ledger and required telemetry not implemented",
+        "run invalidation and no-selective-retry validators not frozen",
+        "evaluator implementation, fixtures, hash, and owner approval pending"
+      ]
+    }
+  ],
+  "release_effect": {
+    "all_gates_conjunctive": true,
+    "qualification_executable": false,
+    "v2_release_ready": false
+  },
+  "global_denominator_rule": {
+    "population": "100_PERCENT_OF_PREFROZEN_APPLICABLE_POPULATION",
+    "post_run_exclusions_allowed": false,
+    "population_or_label_correction_requires_new_version": true
+  },
+  "generation_policy": {
+    "complete_qualification_runs": 3,
+    "provider_dependent_gate_pass_rule": "EVERY_COMPLETE_RUN_INDEPENDENTLY_PASSES",
+    "pooled_metrics": "REQUIRED_SUPPLEMENTAL_REPORTING_ONLY",
+    "pooled_metrics_can_rescue_failed_run": false,
+    "same_frozen_population": true,
+    "same_provider_model_prompt": true,
+    "stochasticity": "DETERMINISTIC_OR_LOWEST_SUPPORTED",
+    "best_of_three_allowed": false,
+    "individual_failed_case_retry_selection_allowed": false,
+    "critical_unsupported_claims_allowed_per_run": 0
+  },
+  "retry_policy": {
+    "application_level_retries": 0,
+    "preexisting_frozen_transport_retries_allowed": true,
+    "transport_retries_remain_one_logical_attempt": true,
+    "required_telemetry": [
+      "logical_attempt_id",
+      "physical_call_count",
+      "retry_count",
+      "retry_reason",
+      "provider_error_class",
+      "final_disposition"
+    ],
+    "retry_rate_metric": "NON_BLOCKING",
+    "selective_case_rerun_allowed": false,
+    "complete_invalidated_run_rerun_only": true
+  }
+}
