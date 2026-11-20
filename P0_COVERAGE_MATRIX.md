@@ -59,3 +59,6 @@ Historical source and evaluator bytes have been directly SHA-256 verified in pri
 
 ## Rereview verification — 2026-11-20
 All 11 records in `source_reference/SOURCE_BINDINGS_20261120.json` were independently re-fetched from the private historical archive during rereview. Byte counts and SHA-256 values matched the local ledger **11/11**. This verifies provenance identity only; the source is still not repository-local, commit-bound, or a substitute for curated local V1 code/tests.
+
+## Original identity reference transfer (2026-11-20)
+The selected identity-source slice is now materially populated: 5 exact historical implementation modules in `source_reference/identity/` and 3 exact historical identity tests in `tests_reference/historical/identity/`, with 8/8 equal original/local SHA-256 fingerprints and 138,849 bytes. This counts as **local exact source transfer** for that selected subset, not complete implementation coverage, source revision equivalence, or a passing historical behavior-test suite. Other required source and report families remain incomplete; `IRG-X001` persists and strict completion is blocked.
