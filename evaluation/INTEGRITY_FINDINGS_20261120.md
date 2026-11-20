@@ -46,3 +46,6 @@ Use `--strict` only when the repository is intended to satisfy full seed-complet
 ## Revision-history limitation
 
 The accessible historical artifact record did not yield the evaluator-bound master-manifest revision `9ddf9eaf...`. IRG-X001 therefore remains unresolved. Future resolution must come from a directly bound historical checkout or archived artifact-index evidence, not an inferred or reconstructed manifest.
+
+## Addendum — owner-approval state and exact evaluator source binding
+The evaluator implementation report and manifest record a preapproval state, while the independently retrieved **subsequent owner approval file** `frozen/V2_EVALUATOR_APPROVAL_v1.json` explicitly freezes `v2-evaluator.1` as `AUTHORITATIVE_FROZEN`. Its manifest and derived-population SHA-256 bindings match available original bytes. Ten of ten original evaluator source/test files also match the manifest; frozen dependency, fixture and focused-test evidence hashes match. Qualification stays `NOT_EXECUTED`; the approval file prohibits qualification execution by itself. This does **not** reconcile the evaluator-bound master manifest `9ddf9eaf...` against the available `fa6b6291...`. See [approval reconciliation](EVALUATOR_APPROVAL_RECONCILIATION_20261120.md) and [source lineage](IRG_X001_MANIFEST_LINEAGE_20261120.md).

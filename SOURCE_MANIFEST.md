@@ -48,3 +48,7 @@ A transfer is complete only when:
 6. the artifact is classified correctly as frozen, historical, research, or current synthesis.
 
 A pointer, filename, summary, or project-history statement is never sufficient to label an artifact `TRANSFERRED_EXACT`.
+
+## Externally verified, not locally transferred (2026-11-20)
+
+The [source binding inventory](source_reference/SOURCE_BINDINGS_20261120.json) and [evaluator provenance ledger](evaluation/EVALUATOR_PROVENANCE_LEDGER.json) record hashes of private historical source/test bytes. Both explicitly set `p0_local_evidence_status: EXTERNALLY_VERIFIED_NOT_LOCAL`; these inventories **do not** satisfy the curated local implementation/test folders. The owner-approved evaluator contract/fixture/approval metadata is separately available as exact local transfers under `evaluation/frozen/`, subject to publication review. For transfer vs archive-source rules, see [reference portability policy](governance/REFERENCE_PORTABILITY_POLICY.md).

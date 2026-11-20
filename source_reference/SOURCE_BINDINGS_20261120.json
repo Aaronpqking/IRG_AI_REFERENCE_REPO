@@ -1,0 +1,134 @@
+{
+  "schema_version": "irg.reference.source_bindings.v1",
+  "snapshot_observed": "2026-11-20",
+  "source_storage": "private_google_drive",
+  "root_folder": {
+    "name": "irg_ai-main",
+    "id": "1VBndYUtg-q1RY30If5xzzmmhm2kb6arm",
+    "created_at": "2026-07-29T16:17:25.479Z"
+  },
+  "source_status": "SELECTED_DIRECT_FILES_HASHED_UNBOUND_TO_GIT_REVISION",
+  "constraints": [
+    "Cannot infer commit SHA from Drive folder name or creation timestamp",
+    "Do not copy source bytes to public reference repository",
+    "AST parsed but runtime tests and import graph not executed",
+    "Source may contain files edited at different times"
+  ],
+  "records": [
+    {
+      "path": "src/bootstrap/composition.py",
+      "drive_file_id": "1zqY6xBg71MRos9abwjD4uznbXC3W3xz8",
+      "bytes": 14354,
+      "sha256": "2bb250b11126bcb2e1a36448a0e2e37f0ada7bac55a3086c69799338026f318f",
+      "role": "RUNTIME_COMPOSITION",
+      "sensitive_class": "INTERNAL_IMPLEMENTATION",
+      "verification": "SHA256_DIRECT_DRIVE_BYTES_AND_PYTHON_AST_PARSE",
+      "git_commit_binding": null
+    },
+    {
+      "path": "src/conversation_loop.py",
+      "drive_file_id": "1kNTvSTArddDN5KCrnBXIOVgChckh92gE",
+      "bytes": 58735,
+      "sha256": "47ff4b8f219865c49e9dc908a2c6974502cf55c3598a7ea62efebf04eebaf56a",
+      "role": "TURN_ORCHESTRATION",
+      "sensitive_class": "INTERNAL_IMPLEMENTATION",
+      "verification": "SHA256_DIRECT_DRIVE_BYTES_AND_PYTHON_AST_PARSE",
+      "git_commit_binding": null
+    },
+    {
+      "path": "src/multi_source_retrieval.py",
+      "drive_file_id": "11azUqj32pYclHjS_dVBqEa1wiBfOCEq3",
+      "bytes": 132234,
+      "sha256": "d662f977c719f2cb42d7c02aa9f86f70f6afc08088be3e9ef4530abb9d6b1717",
+      "role": "PRODUCT_DISCOVERY_EVIDENCE",
+      "sensitive_class": "INTERNAL_IMPLEMENTATION",
+      "verification": "SHA256_DIRECT_DRIVE_BYTES_AND_PYTHON_AST_PARSE",
+      "git_commit_binding": null
+    },
+    {
+      "path": "src/hybrid_retrieval.py",
+      "drive_file_id": "1FFDBP7xg3-Ue9TBjnSp42lfw2R_yU9tx",
+      "bytes": 53701,
+      "sha256": "93b67572ef9a51650bbfc43e26d8e9676d98cafa050a3cfeaa2a0882d9913a84",
+      "role": "HYBRID_RETRIEVAL",
+      "sensitive_class": "INTERNAL_IMPLEMENTATION",
+      "verification": "SHA256_DIRECT_DRIVE_BYTES_AND_PYTHON_AST_PARSE",
+      "git_commit_binding": null
+    },
+    {
+      "path": "src/unified_answer_context.py",
+      "drive_file_id": "1FZEIms9KEvYi8LkZ3gUMtvemMTwn4RKs",
+      "bytes": 33409,
+      "sha256": "358bed1c3c047d7bcdb3e11f5045ecf36552c107499e7da46cc2de65eb15aee4",
+      "role": "CONTEXT_ASSEMBLY",
+      "sensitive_class": "INTERNAL_IMPLEMENTATION",
+      "verification": "SHA256_DIRECT_DRIVE_BYTES_AND_PYTHON_AST_PARSE",
+      "git_commit_binding": null
+    },
+    {
+      "path": "src/v2_evaluator/scorers.py",
+      "drive_file_id": "1HUt0oidsQOE8LMAkdSfzImgjOTadNiJ0",
+      "bytes": 27510,
+      "sha256": "dd9c117eba83a8843f59647a80a296e3567a3063d40d13f177524f03a8b7099e",
+      "role": "EVALUATION_SCORERS",
+      "sensitive_class": "INTERNAL_IMPLEMENTATION",
+      "verification": "SHA256_DIRECT_DRIVE_BYTES_AND_PYTHON_AST_PARSE",
+      "git_commit_binding": null
+    },
+    {
+      "path": "src/context_serialization.py",
+      "drive_file_id": "1TjV7NdJ576GQLfldO05a5_mMJhbpRFJu",
+      "bytes": 4273,
+      "sha256": "f4ea4be1d40d3146289eeeb0acceff6e6648d2aa75f290e989d242b494e37363",
+      "role": "CONTEXT_SERIALIZATION",
+      "sensitive_class": "INTERNAL_IMPLEMENTATION",
+      "verification": "SHA256_DIRECT_DRIVE_BYTES_AND_PYTHON_AST_PARSE",
+      "git_commit_binding": null
+    },
+    {
+      "path": "tests/test_core_boundaries.py",
+      "drive_file_id": "13T7nQALNQkkIcib6AkCGpTG05JktpHWA",
+      "bytes": 6642,
+      "sha256": "8b70641976dad0eb6a37f3685bc9efb16aa6bff0589bb44ce9aeb593eab43553",
+      "role": "BOUNDARY_TESTS",
+      "sensitive_class": "INTERNAL_IMPLEMENTATION",
+      "verification": "SHA256_DIRECT_DRIVE_BYTES_AND_PYTHON_AST_PARSE",
+      "git_commit_binding": null
+    },
+    {
+      "path": "tests/test_identity_resolution_evidence_gate.py",
+      "drive_file_id": "16df_om1JCAcWHRPA8VHUul0mQTP_Z3Hv",
+      "bytes": 28105,
+      "sha256": "a8cf123a76678b12a580478b12cc880c45002d7f9c307907a1666de80235e8d8",
+      "role": "IDENTITY_EVIDENCE_TESTS",
+      "sensitive_class": "INTERNAL_IMPLEMENTATION",
+      "verification": "SHA256_DIRECT_DRIVE_BYTES_AND_PYTHON_AST_PARSE",
+      "git_commit_binding": null
+    },
+    {
+      "path": "tests/test_hybrid_pdf_retrieval.py",
+      "drive_file_id": "1aYOg9DYdPHGF1-kudl-SF3MSWg5zCwfF",
+      "bytes": 19165,
+      "sha256": "75c5ed1da69868c5996f3113b393d6105bcd6340c1fec01320c5c45ae1dc34ee",
+      "role": "HYBRID_RETRIEVAL_TESTS",
+      "sensitive_class": "INTERNAL_IMPLEMENTATION",
+      "verification": "SHA256_DIRECT_DRIVE_BYTES_AND_PYTHON_AST_PARSE",
+      "git_commit_binding": null
+    },
+    {
+      "path": "tests/test_citation_validation.py",
+      "drive_file_id": "1SGy9-4GNlgNg915o15fj98cqGzmUNQ18",
+      "bytes": 43769,
+      "sha256": "6dba77ca63536bac304b307f0db7670a9a59871915d02e680b2e48e06ee6f7fa",
+      "role": "CITATION_TESTS",
+      "sensitive_class": "INTERNAL_IMPLEMENTATION",
+      "verification": "SHA256_DIRECT_DRIVE_BYTES_AND_PYTHON_AST_PARSE",
+      "git_commit_binding": null
+    }
+  ],
+  "p0_local_evidence_status": "EXTERNALLY_VERIFIED_NOT_LOCAL",
+  "codex_external_archive_dependency": "PROHIBITED",
+  "local_source_completion": false,
+  "provenance_ids_optional": true,
+  "publication_review_status": "REQUIRES_FINAL_REVIEW"
+}

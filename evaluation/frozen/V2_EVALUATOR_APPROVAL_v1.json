@@ -1,0 +1,57 @@
+{
+  "approval": {
+    "approval_status": "AUTHORITATIVE_FROZEN",
+    "approved_at": "2026-09-02",
+    "approved_by": "Aaron",
+    "authority_model": "SOLE_AUTHORITY"
+  },
+  "approved_artifact": {
+    "derived_gate_population_path": "docs/evaluation/evaluator_v1/V2_DERIVED_GATE_POPULATIONS_v1.json",
+    "derived_gate_population_sha256": "3ea5a4648e9a7043d3100fcf6aafb9494fb76c5146e842f6335dab50ed7ce0f0",
+    "evaluator_version": "v2-evaluator.1",
+    "manifest_path": "docs/evaluation/evaluator_v1/V2_EVALUATOR_MANIFEST_v1.json",
+    "manifest_sha256": "2085173fb9871a6a4a2bb6da2960c4163a4a5f3288a2682e71f4f9075e5cd60e"
+  },
+  "approved_scope": [
+    "evaluator schemas",
+    "ledger contracts",
+    "deterministic scorer primitives",
+    "G01 scorer",
+    "G02 scorer",
+    "G03 scorer",
+    "G05 scorer",
+    "G06 scorer and review import contract",
+    "G07 scorer",
+    "G18 scorer",
+    "multi-run aggregation logic",
+    "retry accounting",
+    "frozen derived gate populations",
+    "fixture behavior",
+    "denominator derivation rules",
+    "non-blocking isolation"
+  ],
+  "authorization_limits": {
+    "corpus_or_qdrant_mutation_authorized": false,
+    "git_publication_authorized": false,
+    "mysql_mutation_authorized_by_this_record": false,
+    "prompt_mutation_authorized": false,
+    "qualification_execution_authorized": false,
+    "retrieval_mutation_authorized": false,
+    "runtime_mutation_authorized": false
+  },
+  "canonical_content_sha256": "5ba7550df630adb7dc0ffddceb1d4948ccf230bf38745acb47d6e797b7c6997a",
+  "immutability": {
+    "approved_manifest_bytes_modified": false,
+    "substantive_change_requires_new_evaluator_version": true,
+    "substantive_change_requires_new_hashes": true,
+    "substantive_change_requires_new_owner_approval": true,
+    "substantive_change_requires_new_tests": true
+  },
+  "post_approval_state": {
+    "evaluator_implementation": "AUTHORITATIVE_FROZEN",
+    "qualification": "NOT_EXECUTED",
+    "qualification_plan": "PENDING",
+    "v2_0": "RELEASE_BLOCKED_PENDING_QUALIFICATION"
+  },
+  "schema_version": "v2-evaluator-owner-approval.1"
+}

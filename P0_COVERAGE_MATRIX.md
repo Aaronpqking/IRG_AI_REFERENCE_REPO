@@ -33,17 +33,17 @@ Coverage audited against the 2026-11-20 supplied **IRG AI Reference Repository S
 | `reports/reference/scale/CORPUS_SCALE_EVOLUTION.md` | PARTIAL | Historical scale counts, original structural manifests missing |
 | `reports/reference/scale/EXPANDED_CORPUS_SCALE_TEST.md` | PARTIAL | Historical 40/10 results synthesized, late immutable ledgers missing |
 | `reports/reference/ablations/STANDARD_VS_FULL_VIEW_P2_ABLATION.md` | PARTIAL | Late paired 17-case research reported, original October run missing |
-| `reports/reference/audits/CLEAN_LAB_AUDIT_SYNTHESIS.md` | PARTIAL | Historical audit synthesis, selected detailed audits not yet transferred |
+| `reports/reference/audits/CLEAN_LAB_AUDIT_SYNTHESIS.md` | PARTIAL | Historical audit synthesis, selected detailed audits not yet transferred; directly checked source available separately |
 
 ## Summary
 - Total named P0 destinations/groups: **30**.
 - Implemented at the document/directory level: **15**.
 - Partial due to missing bound original evidence, source snapshots, run artifacts or coverage: **15**.
-- Full-P0 empirical qualification: **BLOCKED** by unresolved IRG-X001, private source availability and late experimental provenance.
+- Full-P0 empirical qualification: **BLOCKED** by unresolved IRG-X001, historical source revision binding and late experimental provenance.
 
 ## High-priority completion sequence
 1. Resolve evaluator/master manifest hash mismatch **IRG-X001** from original bound source revision; do not change the frozen manifest to force a pass.
-2. Import applicable original tests/source from authorized historical checkout as a *curated reference*, redacted for the public repository.
+2. Verify 11 discovered original Drive source/test files against the exact historical Git commit; do not publish private source bodies.
 3. Verify late October P1/P2 and scale report run IDs, frozen cases and metadata; leave current reported statistics at `HISTORY_REPORTED_UNVERIFIED` until then.
 4. Expand evaluation crosswalk to all required milestone runs; separate invalid, blocked, fresh holdout and development metrics.
 5. Audit detailed original architecture/codebase reports and update accepted/rejected mechanisms based on direct source.
@@ -53,3 +53,6 @@ Coverage audited against the 2026-11-20 supplied **IRG AI Reference Repository S
 A copied ADR is historical evidence, not executable proof. A transferred frozen manifest is not a completed evaluation. The 244-case population and 615-row triage are hash-verified in Drive and withheld from the public repository. Seed integrity CI is independent of strict qualification.
 
 See [P0_SEED_LEDGER.md](P0_SEED_LEDGER.md), [evaluation/FROZEN_TRANSFER_LEDGER.json](evaluation/FROZEN_TRANSFER_LEDGER.json), and [evaluation/INTEGRITY_FINDINGS_20261120.md](evaluation/INTEGRITY_FINDINGS_20261120.md).
+
+## Updated provenance vs local-implementation classification
+Historical source and evaluator bytes have been directly SHA-256 verified in private Drive, but **no historical implementation modules were deposited in the required local source subdirectories**. The source register is an evidence inventory, not substantive curated code. Required local test semantics and all strict completion gates remain incomplete. Source use in Codex must follow [REFERENCE_PORTABILITY_POLICY](governance/REFERENCE_PORTABILITY_POLICY.md). The existing 15/30 implemented/partial count is document-level inventory only; this update makes no upward completion-count claim.

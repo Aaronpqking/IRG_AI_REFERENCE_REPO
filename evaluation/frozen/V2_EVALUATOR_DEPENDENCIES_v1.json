@@ -1,0 +1,26 @@
+{
+  "schema_version": "v2-evaluator-dependencies.1",
+  "evaluator_version": "v2-evaluator.1",
+  "runtime_language": "Python >=3.11",
+  "runtime_dependencies": "PYTHON_STANDARD_LIBRARY_ONLY",
+  "standard_library_modules": [
+    "argparse",
+    "collections",
+    "dataclasses",
+    "decimal",
+    "hashlib",
+    "json",
+    "math",
+    "pathlib",
+    "re",
+    "types",
+    "typing",
+    "unicodedata"
+  ],
+  "test_only_dependencies": [
+    "pytest"
+  ],
+  "provider_sdk_dependency": false,
+  "database_driver_dependency": false,
+  "vector_store_client_dependency": false
+}
