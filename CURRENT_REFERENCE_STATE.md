@@ -79,3 +79,6 @@ See [P0_SEED_LEDGER.md](P0_SEED_LEDGER.md), [P0_COVERAGE_MATRIX.md](P0_COVERAGE_
 ## Self-contained evidence rule
 
 Current/reference documents must be interpretable using repository-local artifacts and explicit claim status. External archive locations may be retained only in non-required provenance metadata; Codex must never need external storage access to understand, verify the local transfer hash, or follow the current reference logic.
+
+## Addendum — frozen evaluator approval and source identity (2026-11-20)
+The original 2026-09-02 owner approval file, `evaluation/frozen/V2_EVALUATOR_APPROVAL_v1.json`, establishes `v2-evaluator.1` as `AUTHORITATIVE_FROZEN` **for evaluator implementation only**. The exact evaluator manifest and derived-population hashes match. All ten manifest-bound Python source/test files in the Drive snapshot were independently SHA-256 matched. This later approval supersedes the *status interpretation* of older pending-approval snapshots; it does not edit them. Qualification remains `NOT_EXECUTED`; IRG-X001 remains unresolved. See [evaluator reconciliation](evaluation/EVALUATOR_APPROVAL_RECONCILIATION_20261120.md) and [source bindings](source_reference/SOURCE_BINDINGS_20261120.json). Original Python files remain private; full clean-lab code coverage and October/November run provenance are still incomplete.
