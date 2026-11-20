@@ -30,3 +30,11 @@ See [reference portability and Drive boundary](governance/REFERENCE_PORTABILITY_
 **Identity original-source publication gate:** [Private historical identity inventory](governance/publication_reviews/IDENTITY_SOURCE_TRIAGE_20261120.json) and [review limitations](governance/publication_reviews/IDENTITY_SOURCE_REVIEW_20261120.md) authenticate selected source/test file identities without supplying implementation source or granting publication authorization. `source_reference/identity/` remains incomplete.
 
 **Identity source publication update:** Eight original source/test files are now locally present under [identity source](source_reference/identity/query_identity.py) and `tests_reference/historical/identity/`; full paths and hashes in the [transfer register](governance/publication_reviews/IDENTITY_SOURCE_TRIAGE_20261120.json). Earlier publication-blocked descriptions apply to the pre-approval snapshot only. Historical Git revision and full behavior qualification remain open.
+
+## Local report families after approved reconciliation (2026-11-20)
+- [V1 closeout](reports/reference/v1/V1_CLOSEOUT_EVIDENCE_SUMMARY_20260715.md)
+- [V1.5 engineering baseline](reports/reference/v1_5/V1_5_CLOSEOUT_EVIDENCE_SUMMARY_20260731.md)
+- [Corpus reconciliation](reports/reference/corpus/CORPUS_AUTHORITY_RECONCILIATION_20260804.md)
+- [Structural loss boundary](reports/reference/structural/STRUCTURAL_GATE3_LOSS_BOUNDARIES_20260813.md)
+- [Docling procedure research](research/structural/SHADOW_CORPUS_PROCEDURE_HOLDOUT_20260909.md)
+Each has a local `PROVENANCE.json` in the same directory; these are source-grounded **curated summaries, not exact historical source transfers**. The [identity-family source/test transfer register](governance/publication_reviews/IDENTITY_SOURCE_TRIAGE_20261120.json) separately contains eight user-approved byte-identical historical Python files. Earlier index descriptions of source as private apply to the state *before* publication; no other source family is promoted by this update.
