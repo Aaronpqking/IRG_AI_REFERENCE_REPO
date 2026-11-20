@@ -9,7 +9,9 @@ class IdentityPublicationReviewTests(unittest.TestCase):
         doc=json.loads((ROOT/"governance/publication_reviews/IDENTITY_SOURCE_TRIAGE_20261120.json").read_text(encoding="utf-8"))
         records=doc["records"]
         self.assertEqual(len(records),8)
-        self.assertEqual(doc["hash_matches"],8)
+        self.assertEqual(doc["hash_matches"],0)
+        self.assertEqual(doc["hash_comparisons_performed"],0)
+        self.assertEqual(doc["hashes_computed_from_original_bytes"],8)
         self.assertEqual(doc["hash_mismatches"],0)
         self.assertEqual(doc["ast_parse_pass"],8)
         self.assertEqual(doc["tests_defined_not_executed"],24)
