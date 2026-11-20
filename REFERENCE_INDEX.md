@@ -50,3 +50,6 @@ Each has a local `PROVENANCE.json` in the same directory; these are source-groun
 - [Late run provenance and IRG-X001 unresolved record](reports/reference/audits/LATE_RUN_PROVENANCE_RECONCILIATION_20261120.md)
 
 **Important:** Historical source spans distinct stages. Never treat selected files as an importable, coherent historical production tree; do not infer execution from test existence, or empirical qualification from hash-verified source files. Private frozen question populations remain withheld.
+
+## Structural research trajectory — synthesized decision map (2026-11-20)
+[Structural research synthesis](research/structural/STRUCTURAL_RESEARCH_SUMMARY.md) integrates locally transferred structural milestone source, the August/September curated reports, original V1.5 boundaries, positive/negative ablations, late scale evidence and clean-build recommendations. Classification: **`HYBRID / SYNTHESIS`**, not an exact original run or unified historical production runtime. Start with its mechanism-level classification and denominator quarantine; escalate to the linked original source, report provenance and experiment register.
