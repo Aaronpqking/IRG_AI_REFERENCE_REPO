@@ -42,6 +42,9 @@ jobs:
         run: |
           python scripts/validate_reference_seed.py
           python -m unittest discover -s tests_reference -p 'test_*.py' -v
+      - name: Run read-only completion census and strict validator diagnostic
+        run: |
+          python scripts/audit_reference_completion.py
       - name: Do not silently qualify P0
         run: |
           python - <<'PY'
