@@ -51,3 +51,6 @@ No production database, provider, corpus, vector index, deployment, release stat
 - Independently recovered owner approval `V2_EVALUATOR_APPROVAL_v1.json` binds the existing manifest and derived population to frozen **implementation approval**. It explicitly leaves qualification `NOT_EXECUTED` and execution unauthorized.
 - The three distinct master-manifest digests in [IRG-X001 lineage](evaluation/IRG_X001_MANIFEST_LINEAGE_20261120.md) remain unequal. Do not claim full qualification or quietly substitute revisions.
 - Public metadata is in [EVALUATOR_PROVENANCE_LEDGER](evaluation/EVALUATOR_PROVENANCE_LEDGER.json) and [SOURCE_BINDINGS](source_reference/SOURCE_BINDINGS_20261120.json). Original code, private questions, and raw derived-case data stay out of this public repository.
+
+## Isolated offline evaluator replay (2026-11-20)
+Original SHA-bound evaluator code was assembled in a private temporary workspace. **17/17** core tests passed; a combined subset completed **20 passed and 3 deliberately deselected**. The three deselections concern original frozen master-manifest closure, full bound-file closure and exact builder reproduction; they remain qualification blockers rather than silent passes. See [replay report](evaluation/EVALUATOR_ISOLATED_OFFLINE_REPLAY_20261120.md). No external provider/database/vector calls or serving changes occurred.
