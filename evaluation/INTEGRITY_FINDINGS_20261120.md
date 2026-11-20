@@ -23,7 +23,7 @@ The evaluator manifest binds a master manifest hash:
 They differ. This can reflect a separate revision or a post-freeze modification; it is **not enough evidence to diagnose corruption**. Do not repoint/rewrite any frozen artifact to make the check pass. Find the evaluator-bound version, compare its byte content and frozen population binding, and add a new explicit reconciliation record. Qualification across the two manifests is **BLOCKED** pending that resolution.
 
 ## Current qualification
-V2 historical artifacts remain **NOT_EXECUTED** for release qualification at the captured manifest state. `V2_EVALUATOR_MANIFEST_v1.json` says evaluator approval pending and no qualification authorized. The existence of a scorer and manifest does not prove release readiness.
+V2 historical release qualification remains **NOT_EXECUTED**. While the evaluator manifest and implementation report show a prior `PENDING_OWNER_APPROVAL` status, separate **later owner approval** `V2_EVALUATOR_APPROVAL_v1.json` establishes `v2-evaluator.1` as `AUTHORITATIVE_FROZEN` for evaluator implementation only. Its exact manifest binding and 10/10 source/test file hashes were verified. The approval explicitly does not authorize qualification or runtime changes. See [approval reconciliation](EVALUATOR_APPROVAL_RECONCILIATION_20261120.md).
 
 ## Programmatic check
 Run `python scripts/validate_reference_seed.py`; `--strict` requires no blockers. No live provider, product database, Qdrant or corpus mutation is part of this check.
