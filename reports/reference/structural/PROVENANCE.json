@@ -1,0 +1,17 @@
+{
+  "schema_version": "irg.p0.curated_family.v1",
+  "source_name": "GATE_3_STRUCTURAL_INFORMATION_PRESERVATION_20260813T191541Z.md",
+  "source_date": "2026-08-13",
+  "destination_path": "reports/reference/structural/STRUCTURAL_GATE3_LOSS_BOUNDARIES_20260813.md",
+  "artifact_class": "LOCAL_CURATED_REPORT_SUMMARY",
+  "source_sha256": null,
+  "source_byte_count": null,
+  "local_sha256": null,
+  "transfer_status": "CURATED_NOT_EXACT_TRANSFER",
+  "publication_review": "USER_APPROVED_2026_11_20_FOR_REPORT_RECONCILIATION",
+  "redaction_status": "NOT_APPLICABLE_NEW_SYNTHESIS",
+  "authority_class": "HISTORICAL_REPORT_SUMMARY_NOT_REEXECUTED",
+  "original_run_bundle_local": false,
+  "reason_retained": "bounded historical mechanism and failure evidence",
+  "notes": "Do not treat source-document reads and generated curated summaries as original historical report transfer. Source archive not required for reading local summary."
+}
