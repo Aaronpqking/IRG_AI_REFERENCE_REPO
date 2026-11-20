@@ -43,7 +43,7 @@ Coverage audited against the 2026-11-20 supplied **IRG AI Reference Repository S
 
 ## High-priority completion sequence
 1. Resolve evaluator/master manifest hash mismatch **IRG-X001** from original bound source revision; do not change the frozen manifest to force a pass.
-2. Verify 11 discovered original Drive source/test files against the exact historical Git commit; do not publish private source bodies.
+2. Verify 11 discovered original archived source/test files against the exact historical Git commit; do not publish private source bodies.
 3. Verify late October P1/P2 and scale report run IDs, frozen cases and metadata; leave current reported statistics at `HISTORY_REPORTED_UNVERIFIED` until then.
 4. Expand evaluation crosswalk to all required milestone runs; separate invalid, blocked, fresh holdout and development metrics.
 5. Audit detailed original architecture/codebase reports and update accepted/rejected mechanisms based on direct source.
@@ -56,3 +56,6 @@ See [P0_SEED_LEDGER.md](P0_SEED_LEDGER.md), [evaluation/FROZEN_TRANSFER_LEDGER.j
 
 ## Updated provenance vs local-implementation classification
 Historical source and evaluator bytes have been directly SHA-256 verified in private Drive, but **no historical implementation modules were deposited in the required local source subdirectories**. The source register is an evidence inventory, not substantive curated code. Required local test semantics and all strict completion gates remain incomplete. Source use in Codex must follow [REFERENCE_PORTABILITY_POLICY](governance/REFERENCE_PORTABILITY_POLICY.md). The existing 15/30 implemented/partial count is document-level inventory only; this update makes no upward completion-count claim.
+
+## Rereview verification — 2026-11-20
+All 11 records in `source_reference/SOURCE_BINDINGS_20261120.json` were independently re-fetched from the private historical archive during rereview. Byte counts and SHA-256 values matched the local ledger **11/11**. This verifies provenance identity only; the source is still not repository-local, commit-bound, or a substitute for curated local V1 code/tests.
