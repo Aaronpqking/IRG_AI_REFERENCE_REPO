@@ -1,0 +1,43 @@
+name: Reference evidence validation
+on:
+  pull_request:
+    paths:
+      - "evaluation/**"
+      - "scripts/**"
+      - "tests_reference/**"
+      - "CLAIM_REGISTER.jsonl"
+      - ".github/workflows/reference-validation.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "evaluation/**"
+      - "scripts/**"
+      - "tests_reference/**"
+      - "CLAIM_REGISTER.jsonl"
+
+permissions:
+  contents: read
+
+jobs:
+  offline-evidence-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify reference evidence and policy-visible blockers
+        run: |
+          python scripts/validate_reference_seed.py
+          python -m unittest discover -s tests_reference -p 'test_*.py' -v
+      - name: Do not silently qualify P0
+        run: |
+          python - <<'PY'
+          from scripts.validate_reference_seed import validate
+          result = validate()
+          assert result["status"] == "PASS_WITH_BLOCKERS", result
+          assert result["errors"] == 0, result
+          print("PASS_WITH_BLOCKERS: source bytes validated; full P0 promotion remains blocked")
+          PY
